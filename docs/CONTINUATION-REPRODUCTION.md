@@ -74,3 +74,7 @@ Run `python tests/continuation-g/test_overlay_resources.py` with authorized inpu
 ## Configuration/font/backend contracts (36 records)
 
 Run `python tests/continuation-h/test_overlay_config.py` and `python tools/validate-continuation-results.py --group continuation-h` with authorized inputs. Default `results/generated/continuation-h/`, overridden by `AU_RESULTS`. Native/model 36/36 passed; resource-guard 34/34 regression rerun byte-identical after import-safe refactor. Older native suites not rerun. Default validator expects 734 records; only group h integrity-validated this pass. [Explicit GUI/font/backend provider boundaries](reports/OVERLAY-CONFIG-FONTS-BACKEND.md). Ready font paths stop before size synchronization; backend-wrapper tests are standalone, not full Overlay/backend success.
+
+## Size/backend/attachment composition (30 records)
+
+Run `python tests/continuation-i/test_overlay_attachment.py`, then `python tools/validate-continuation-results.py --group continuation-i`, with authorized inputs. Default generated output `results/generated/continuation-i/`, overridden by `AU_RESULTS`. New 30/30 and prior 34/36-case regressions passed; historical regression records byte-identical. Other older native suites not rerun. Default validator now expects 764 labels; only group i integrity-validated this pass. [Conditional threading, pre-return stop and modeled providers](reports/OVERLAY-SIZE-ATTACHMENT-COMPOSITION.md).

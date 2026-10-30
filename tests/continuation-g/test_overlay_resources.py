@@ -50,9 +50,9 @@ class Overlay(Model):
   elif sel=='initWithDevice:':
    assert receiver==LOADER and arg==DEVICE;e.set(0,0 if self.mode=='loader_init_nil' else LOADER)
   else:raise AssertionError(('Unexpected message',sel,hex(receiver)))
- def initialize(self,control,stop=0x6849f8):
+ def initialize(self,control,stop=0x6849f8,windows=(DRAW,MENU,FLOAT)):
   e=self.e;e.pending=None
-  args=[(0,SELF),(1,0),(2,control),(3,DRAW),(4,MENU),(5,FLOAT)]
+  args=[(0,SELF),(1,0),(2,control),(3,windows[0]),(4,windows[1]),(5,windows[2])]
   e.run(0x684454,args,stops=[stop])
   while e.pending is not None:
    work=e.pending;e.pending=None

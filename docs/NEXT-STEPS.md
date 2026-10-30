@@ -73,3 +73,9 @@ Next: continue font/GUI/backend/size setup beyond that stop and trace nontrivial
 [36 new cases](reports/OVERLAY-CONFIG-FONTS-BACKEND.md): native Documents/imgui.ini path and IO stores continue after modeled create/UTF8/duplicate failures; required first/third font nil returns nil, intermediate merge nil does not stop this caller. Standalone native backend wrappers return literal true despite zero modeled subordinate results, so their return/flags do not prove GPU setup success.
 
 Next: actual size synchronization and parent/child checks through the late nontrivial Menu backreference setter. GUI context/font/device-object providers and ownership/writers remain open; no whole successful Overlay initializer or runtime performance fix. Prior 34-case guard regression remains byte-identical.
+
+## Size/backend/attachment composition
+
+[30 new cases](reports/OVERLAY-SIZE-ATTACHMENT-COMPOSITION.md) compose native size synchronization, backend wrappers and optional Float/Draw/Menu routing through the pre-return stop `0x6854a8`. Main-thread size writes occur before backend/attachment work; a forced off-main boundary defers size work until the captured native block is manually drained, without proving that startup can reach this route. Native Menu reference publication precedes device/cache/decode-false guards and still reaches modeled readIniConfig.
+
+Next: final return including nonnil R03 instrumentation, successful Menu texture work and nonnil INI apply, actual child callbacks and control-state ownership/writers. No full initializer return, real backend/device success or performance/race diagnosis. Prior 34/36 records rerun byte-identical.
