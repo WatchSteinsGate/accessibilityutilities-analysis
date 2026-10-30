@@ -1,0 +1,101 @@
+{
+  "format": "attachment-intake-v1",
+  "attachment_occurrences": 9,
+  "unique_sha256": 7,
+  "original_workpack_copies": 3,
+  "attachments": [
+    {
+      "name": "Resize-layout-continuation.md",
+      "size": 9167,
+      "sha256": "7fba7b614d2da6bad3ebb19b7dd8dc76617adeeef379e3cb5f8197d0ee626c37",
+      "disposition": "Exact reviewed standalone report preserved; historical source, not current portable reproduction instructions.",
+      "repository_files": [
+        "docs/source-reports/Resize-layout-continuation.md",
+        "docs/RESIZE-LAYOUT-CONTINUATION.md"
+      ]
+    },
+    {
+      "name": "Whole-system-success-path-evidence.zip",
+      "size": 2181420,
+      "sha256": "bdb8cabce314cfd74268c1bf2f12cb740c5bdc241f6816d22925d21841204607",
+      "archive_file_count": 133,
+      "disposition": "Mixed historical whole-system source archive identified. Raw disassembly, broad function index, security/validation implementation detail and nonportable harness sources not republished; existing curated whole-system report remains canonical.",
+      "repository_files": [
+        "docs/INTEGRITY-AND-TRACE.md",
+        "docs/HANDOFF.md"
+      ]
+    },
+    {
+      "name": "AccessibilityUtilities-V58-R03-buffer-initialization-repair.zip",
+      "size": 7987753,
+      "sha256": "dc887be38e6753c3a5316149e2a0b74463a850a4929df7f9cc59a93c962ed583",
+      "archive_file_count": 34,
+      "disposition": "R03 framework verified and used read-only; installable framework, patch/build/install scripts and opaque archive not published.",
+      "verified_framework_sha256": "d1a05ff2d8164ec326898d3d2d9709fb638f85d8550436f8e5d9c845be54b292"
+    },
+    {
+      "name": "workpack.zip",
+      "size": 8143303,
+      "sha256": "e5091be0d1bd5ae339f93e99ef32e62fee2f9d8dacd67fd12fcd07724ad4a79c",
+      "archive_file_count": 79,
+      "occurrence": 1,
+      "disposition": "Hash-identical original workpack copy; reference framework verified and used read-only. Archive, proprietary framework and operational patch/bypass material not published.",
+      "verified_framework_sha256": "b685c0f98b15597fb9eabb6d09758a2637246198a1af24a044c2010953fb80ab"
+    },
+    {
+      "name": "AccessibilityUtilities-V58-R01-position-cache-candidate.zip",
+      "size": 7974667,
+      "sha256": "a78f299a967e0e7597ebf33862c12a8d7254acc29e276354e0f52367676d1236",
+      "archive_file_count": 21,
+      "disposition": "Historical candidate identified only; not executed or used as an original/R03 substitute. Binary and build/apply tooling not published.",
+      "framework_sha256": "fd81099a1fb7b1a5e9a2c2fc22ba55edf408e8b6267412ea5698e1b6bfcefda5"
+    },
+    {
+      "name": "Resize-layout-continuation-evidence.zip",
+      "size": 27357,
+      "sha256": "f0cdbaba20ad741d95d41ac8f1807c0bc8621af0390a7b7cef6a2f5456bb8fa3",
+      "archive_file_count": 32,
+      "disposition": "Source archive identified; its report matches the preserved standalone attachment byte-for-byte. Existing portable tests/results remain canonical, not asserted byte-identical to archive records.",
+      "repository_files": [
+        "docs/source-reports/Resize-layout-continuation.md",
+        "docs/RESIZE-LAYOUT-CONTINUATION.md",
+        "tests/test_geometry.py",
+        "tests/test_button_layout.py",
+        "tests/test_reentry.py",
+        "results/resize/"
+      ],
+      "archived_report_sha256": "7fba7b614d2da6bad3ebb19b7dd8dc76617adeeef379e3cb5f8197d0ee626c37"
+    },
+    {
+      "name": "workpack.zip",
+      "size": 8143303,
+      "sha256": "e5091be0d1bd5ae339f93e99ef32e62fee2f9d8dacd67fd12fcd07724ad4a79c",
+      "archive_file_count": 79,
+      "occurrence": 2,
+      "disposition": "Hash-identical original workpack copy; reference framework verified and used read-only. Archive, proprietary framework and operational patch/bypass material not published.",
+      "verified_framework_sha256": "b685c0f98b15597fb9eabb6d09758a2637246198a1af24a044c2010953fb80ab"
+    },
+    {
+      "name": "workpack-original-reference.zip",
+      "size": 8143303,
+      "sha256": "e5091be0d1bd5ae339f93e99ef32e62fee2f9d8dacd67fd12fcd07724ad4a79c",
+      "archive_file_count": 79,
+      "occurrence": 3,
+      "disposition": "Hash-identical original workpack copy; reference framework verified and used read-only. Archive, proprietary framework and operational patch/bypass material not published.",
+      "verified_framework_sha256": "b685c0f98b15597fb9eabb6d09758a2637246198a1af24a044c2010953fb80ab"
+    },
+    {
+      "name": "Overlay-lifecycle-continuation-evidence.zip",
+      "size": 20343,
+      "sha256": "ce2fc836d09d5e80ba6b41b2f9b711731f212f8ff462211bd98de8c5ed06df5b",
+      "archive_file_count": 21,
+      "disposition": "Source archive identified; existing curated report, adapted tests and records remain canonical. Raw source archive/disassembly not republished.",
+      "repository_files": [
+        "docs/LIFECYCLE-CONTINUATION.md",
+        "tests/test_view_lifecycle.py",
+        "tests/test_size_sync.py",
+        "results/lifecycle/"
+      ]
+    }
+  ]
+}

@@ -10,6 +10,8 @@ Private, curated research handoff for a read-only integrity and overlay lifecycl
 - [Cancellation, render cleanup and shortcut consumer](docs/CANCELLATION-RENDER-SHORTCUT.md): 232 additional scoped cases.
 - [Accepted attachment, singleton reuse and render completion](docs/ATTACHMENT-FACTORY-COMPLETION.md): 210 additional scoped cases.
 - [Lifecycle queue constraints and routing](docs/reports/LIFECYCLE-SCHEDULING.md): 64 further scoped cases; main-queue routes narrow, but do not settle, the reentry question.
+- [Startup registration and reentry boundaries](docs/reports/STARTUP-REENTRY-BOUNDARIES.md): 58 further scoped cases; recovered registration startup provenance, not a proven race.
+- [All nine supplied attachments accounted for](docs/ATTACHMENT-INTAKE.md).
 - [New-suite reproduction](docs/CONTINUATION-REPRODUCTION.md) and [artifact provenance](docs/CONTINUATION-ARTIFACTS.md).
 
 - [Continuation handoff](docs/HANDOFF.md): current conclusions, user-reported symptoms, decisions, and next steps.
@@ -21,16 +23,17 @@ Private, curated research handoff for a read-only integrity and overlay lifecycl
 
 ## What is verified locally
 
-The repository now retains four continuation groups:
+The repository now retains five investigation groups:
 
 | Group | Labeled scoped cases | Validation |
 | --- | ---: | --- |
 | Existing lifecycle + resize suites (5 scripts) | 294 | Previously validated; preserved unchanged |
 | Cancellation/render/shortcut continuation (4 scripts) | 232 | Fresh portable rerun passed |
 | Attachment/factory/completion continuation (5 scripts) | 210 | Fresh portable rerun passed |
-| Lifecycle scheduling continuation (1 test + static mapper) | 64 | New scoped run passed |
+| Lifecycle scheduling continuation (1 test + static mapper) | 64 | Passed; rerun in startup pass |
+| Startup/reentry boundary continuation (1 test + static mapper) | 58 | New scoped run passed |
 
-The scheduling pass adds **64 records**, bringing the stored total to **800 labeled cases** (294 + 442 + 64), not unique end-to-end paths. Its 64-case suite and static mapper ran with the pinned dependencies; the earlier 736 cases were not rerun in that pass. The indexed continuation validator now covers 506 records.
+The startup/reentry pass adds **58 records**, bringing the stored total to **858 labeled cases** (294 + 442 + 64 + 58), not unique end-to-end paths. The new 58-case suite and static mapper passed; the existing 64-case scheduling suite/mapper and 110-case attachment suite were rerun. Other suites were not rerun. The continuation validator now expects 564 records across groups a–d; only group d was integrity-validated in this partial-checkout pass. See the latest report for boundaries.
 
 In the prior publication, the **nine scripts / 442 records** were rerun using the repository's pinned Capstone 5.0.7 and Unicorn 2.1.4. The then-resulting **736 stored labeled cases across those three groups** are not 736 unique or independent end-to-end paths. Counts include paired builds, synthetic inputs, repetitions, staged mutations and directly seeded cleanup states. Original session runs of the two new groups used Capstone 5.0.9; the portable rerun used 5.0.7.
 

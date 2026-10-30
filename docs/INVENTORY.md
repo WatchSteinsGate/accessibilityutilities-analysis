@@ -1,12 +1,13 @@
 # Included file inventory
 
-Expanded reviewed text only; no proprietary binaries or opaque archives. `SHA256SUMS` covers every listed file except itself. Follow [AGENTS.md](../AGENTS.md); see [artifact provenance](CONTINUATION-ARTIFACTS.md).
+Expanded reviewed text only; no proprietary binaries or opaque archives. `SHA256SUMS` covers every listed file except itself. See [attachment intake](ATTACHMENT-INTAKE.md) and [artifact provenance](CONTINUATION-ARTIFACTS.md).
 
 - `.gitignore`
 - `AGENTS.md`
 - `README.md`
 - `SHA256SUMS`
 - `docs/ATTACHMENT-FACTORY-COMPLETION.md`
+- `docs/ATTACHMENT-INTAKE.md`
 - `docs/CANCELLATION-RENDER-SHORTCUT.md`
 - `docs/CONTINUATION-ARTIFACTS.md`
 - `docs/CONTINUATION-REPRODUCTION.md`
@@ -20,6 +21,8 @@ Expanded reviewed text only; no proprietary binaries or opaque archives. `SHA256
 - `docs/RESIZE-LAYOUT-CONTINUATION.md`
 - `docs/WORKLOG.md`
 - `docs/reports/LIFECYCLE-SCHEDULING.md`
+- `docs/reports/STARTUP-REENTRY-BOUNDARIES.md`
+- `docs/source-reports/Resize-layout-continuation.md`
 - `requirements.txt`
 - `results/continuations/continuation-a/cancellation-tests.json`
 - `results/continuations/continuation-a/cleanup-tail-tests.json`
@@ -55,6 +58,14 @@ Expanded reviewed text only; no proprietary binaries or opaque archives. `SHA256
 - `results/continuations/continuation-b/summary.json`
 - `results/continuations/continuation-c/scheduling-map.json`
 - `results/continuations/continuation-c/scheduling-tests.json`
+- `results/continuations/continuation-d/reentry-boundary-map.json`
+- `results/continuations/continuation-d/reentry-boundary-tests.json`
+- `results/continuations/continuation-d/reentry-boundary-tests/part-001.json`
+- `results/continuations/continuation-d/reentry-boundary-tests/part-002.json`
+- `results/continuations/continuation-d/reentry-boundary-tests/part-003.json`
+- `results/continuations/continuation-d/reentry-boundary-tests/part-004.json`
+- `results/continuations/continuation-d/reentry-boundary-tests/part-005.json`
+- `results/continuations/continuation-d/summary.json`
 - `results/lifecycle/size-sync-tests.json`
 - `results/lifecycle/summary.json`
 - `results/lifecycle/view-lifecycle-tests.json`
@@ -68,6 +79,7 @@ Expanded reviewed text only; no proprietary binaries or opaque archives. `SHA256
 - `results/resize/geometry-tests.json`
 - `results/resize/reentry-tests.json`
 - `results/resize/summary.json`
+- `results/source-attachments/2026-10-30-intake.json`
 - `tests/continuation-a/emulator.py`
 - `tests/continuation-a/native.py`
 - `tests/continuation-a/static_audit.py`
@@ -85,6 +97,8 @@ Expanded reviewed text only; no proprietary binaries or opaque archives. `SHA256
 - `tests/continuation-b/test_factory_attachment.py`
 - `tests/continuation-c/map_scheduling.py`
 - `tests/continuation-c/test_scheduling.py`
+- `tests/continuation-d/map_reentry_boundaries.py`
+- `tests/continuation-d/test_reentry_boundaries.py`
 - `tests/macho.py`
 - `tests/native_env.py`
 - `tests/test_button_layout.py`
@@ -93,4 +107,5 @@ Expanded reviewed text only; no proprietary binaries or opaque archives. `SHA256
 - `tests/test_size_sync.py`
 - `tests/test_view_lifecycle.py`
 - `tests/ui-cache-schema.json`
+- `tools/validate-attachment-intake.py`
 - `tools/validate-continuation-results.py`

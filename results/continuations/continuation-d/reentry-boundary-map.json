@@ -1,0 +1,267 @@
+{
+  "scope": "Two-build aligned immediate B/BL scan of __TEXT,__text, filtered to ten declared routing targets; exact known block descriptors, ten code/data equality windows and initializer-table membership. No indirect-call or other-state-writer completeness claim. Main-queue delivery and libdispatch contracts are external/model assumptions.",
+  "code_equality": [
+    {
+      "role": "startupInitializer",
+      "start": "0x43850",
+      "end_exclusive": "0x4388c",
+      "equal": true,
+      "original_sha256": "10e0ae33d146d0a1b970eae040d0409db456d299f1b341c0d283097b6c15ad87",
+      "r03_sha256": "10e0ae33d146d0a1b970eae040d0409db456d299f1b341c0d283097b6c15ad87"
+    },
+    {
+      "role": "startupCallbackAndProducer",
+      "start": "0x4388c",
+      "end_exclusive": "0x438dc",
+      "equal": true,
+      "original_sha256": "e6d62cf4a0f1c3b272c872ca0202dac66143437f8e75adae882ad3d18340ce62",
+      "r03_sha256": "e6d62cf4a0f1c3b272c872ca0202dac66143437f8e75adae882ad3d18340ce62"
+    },
+    {
+      "role": "mainQueueGetterAndOnceHelpers",
+      "start": "0xf6ccc",
+      "end_exclusive": "0xf6d60",
+      "equal": true,
+      "original_sha256": "39a27759ecd1a6e4f30ea0bdb80c0b8cf18273037ead051a8e337ca4d797a885",
+      "r03_sha256": "39a27759ecd1a6e4f30ea0bdb80c0b8cf18273037ead051a8e337ca4d797a885"
+    },
+    {
+      "role": "onceForwarders",
+      "start": "0x1077ec",
+      "end_exclusive": "0x10780c",
+      "equal": true,
+      "original_sha256": "a5300ad68cd474a61530212b53fe6ccb495784ac146574ba468d2f0f37ee845f",
+      "r03_sha256": "a5300ad68cd474a61530212b53fe6ccb495784ac146574ba468d2f0f37ee845f"
+    },
+    {
+      "role": "suspendForwarders",
+      "start": "0x10791c",
+      "end_exclusive": "0x10793c",
+      "equal": true,
+      "original_sha256": "30b2dcd5b35f66aa9f19ff79cdce169b4018966a3faa1dfe5b04fd591bd76c62",
+      "r03_sha256": "30b2dcd5b35f66aa9f19ff79cdce169b4018966a3faa1dfe5b04fd591bd76c62"
+    },
+    {
+      "role": "transitionForwarders",
+      "start": "0x107bf4",
+      "end_exclusive": "0x107c1c",
+      "equal": true,
+      "original_sha256": "e62d20278506f52ae0b5c0ca5a3ea9878fc3188d3d9df004f595cb0913527e20",
+      "r03_sha256": "e62d20278506f52ae0b5c0ca5a3ea9878fc3188d3d9df004f595cb0913527e20"
+    },
+    {
+      "role": "constructorObjCForwarders",
+      "start": "0x105cdc",
+      "end_exclusive": "0x105d5c",
+      "equal": true,
+      "original_sha256": "e9fd1d61f32228bcc96849c4e989efd93321b10016fb71e5d83835cf358a9d94",
+      "r03_sha256": "e9fd1d61f32228bcc96849c4e989efd93321b10016fb71e5d83835cf358a9d94"
+    },
+    {
+      "role": "rectangleHelper",
+      "start": "0x76e20",
+      "end_exclusive": "0x76e6c",
+      "equal": true,
+      "original_sha256": "ab69617e200af3bec7bbcd9da9d05908ab07c294c453263b046fdd3896734ba2",
+      "r03_sha256": "ab69617e200af3bec7bbcd9da9d05908ab07c294c453263b046fdd3896734ba2"
+    },
+    {
+      "role": "startupBlock",
+      "start": "0xfd99d0",
+      "end_exclusive": "0xfd99f0",
+      "equal": true,
+      "original_sha256": "e369e65769a83ce91703575a7da442ebb77be805c9d71a23427aa8fa9f73c5e2",
+      "r03_sha256": "e369e65769a83ce91703575a7da442ebb77be805c9d71a23427aa8fa9f73c5e2"
+    },
+    {
+      "role": "observerRegistrationBlock",
+      "start": "0xfd9cd0",
+      "end_exclusive": "0xfd9cf0",
+      "equal": true,
+      "original_sha256": "818b34c65b1816b350a5ca2ca063af2ec9422153f74ae2083b69326c5c562ad8",
+      "r03_sha256": "818b34c65b1816b350a5ca2ca063af2ec9422153f74ae2083b69326c5c562ad8"
+    }
+  ],
+  "routing_maps": [
+    {
+      "build": "original",
+      "initializer_table_slots": [
+        "0xfd9578"
+      ],
+      "known_direct_edges": [
+        {
+          "site": "0x438a4",
+          "kind": "BL",
+          "target": "0x438b8",
+          "role": "registrationProducer",
+          "function_start": "0x4388c",
+          "function_end_exclusive": "0x438b8"
+        },
+        {
+          "site": "0x438d0",
+          "kind": "BL",
+          "target": "0xf6d50",
+          "role": "onceWrapperOuter",
+          "function_start": "0x438b8",
+          "function_end_exclusive": "0x438dc"
+        },
+        {
+          "site": "0x7b230",
+          "kind": "BL",
+          "target": "0x10792c",
+          "role": "suspendForwarderOuter",
+          "function_start": "0x7b188",
+          "function_end_exclusive": "0x7b77c"
+        },
+        {
+          "site": "0x7b820",
+          "kind": "BL",
+          "target": "0x107c08",
+          "role": "transitionForwarderOuter",
+          "function_start": "0x7b7f0",
+          "function_end_exclusive": "0x7b864"
+        },
+        {
+          "site": "0xf6d2c",
+          "kind": "BL",
+          "target": "0x1077fc",
+          "role": "onceForwarderOuter",
+          "function_start": "0xf6cf4",
+          "function_end_exclusive": "0xf6d50"
+        },
+        {
+          "site": "0xf6d54",
+          "kind": "BL",
+          "target": "0xf6cf4",
+          "role": "onceWrapperBody",
+          "function_start": "0xf6d50",
+          "function_end_exclusive": "0xf6d60"
+        },
+        {
+          "site": "0x107800",
+          "kind": "BL",
+          "target": "0x1077ec",
+          "role": "onceForwarderInner",
+          "function_start": "0x1077fc",
+          "function_end_exclusive": "0x10780c"
+        },
+        {
+          "site": "0x107930",
+          "kind": "BL",
+          "target": "0x10791c",
+          "role": "suspendForwarderInner",
+          "function_start": "0x10792c",
+          "function_end_exclusive": "0x10793c"
+        },
+        {
+          "site": "0x107c10",
+          "kind": "BL",
+          "target": "0x107bf4",
+          "role": "transitionForwarderInner",
+          "function_start": "0x107c08",
+          "function_end_exclusive": "0x107c1c"
+        }
+      ],
+      "observer_invoke_direct_callers": []
+    },
+    {
+      "build": "r03",
+      "initializer_table_slots": [
+        "0xfd9578"
+      ],
+      "known_direct_edges": [
+        {
+          "site": "0x438a4",
+          "kind": "BL",
+          "target": "0x438b8",
+          "role": "registrationProducer",
+          "function_start": "0x4388c",
+          "function_end_exclusive": "0x438b8"
+        },
+        {
+          "site": "0x438d0",
+          "kind": "BL",
+          "target": "0xf6d50",
+          "role": "onceWrapperOuter",
+          "function_start": "0x438b8",
+          "function_end_exclusive": "0x438dc"
+        },
+        {
+          "site": "0x7b230",
+          "kind": "BL",
+          "target": "0x10792c",
+          "role": "suspendForwarderOuter",
+          "function_start": "0x7b188",
+          "function_end_exclusive": "0x7b77c"
+        },
+        {
+          "site": "0x7b820",
+          "kind": "BL",
+          "target": "0x107c08",
+          "role": "transitionForwarderOuter",
+          "function_start": "0x7b7f0",
+          "function_end_exclusive": "0x7b864"
+        },
+        {
+          "site": "0xf6d2c",
+          "kind": "BL",
+          "target": "0x1077fc",
+          "role": "onceForwarderOuter",
+          "function_start": "0xf6cf4",
+          "function_end_exclusive": "0xf6d50"
+        },
+        {
+          "site": "0xf6d54",
+          "kind": "BL",
+          "target": "0xf6cf4",
+          "role": "onceWrapperBody",
+          "function_start": "0xf6d50",
+          "function_end_exclusive": "0xf6d60"
+        },
+        {
+          "site": "0x107800",
+          "kind": "BL",
+          "target": "0x1077ec",
+          "role": "onceForwarderInner",
+          "function_start": "0x1077fc",
+          "function_end_exclusive": "0x10780c"
+        },
+        {
+          "site": "0x107930",
+          "kind": "BL",
+          "target": "0x10791c",
+          "role": "suspendForwarderInner",
+          "function_start": "0x10792c",
+          "function_end_exclusive": "0x10793c"
+        },
+        {
+          "site": "0x107c10",
+          "kind": "BL",
+          "target": "0x107bf4",
+          "role": "transitionForwarderInner",
+          "function_start": "0x107c08",
+          "function_end_exclusive": "0x107c1c"
+        }
+      ],
+      "observer_invoke_direct_callers": []
+    }
+  ],
+  "known_block_chain": [
+    {
+      "block": "0xfd99d0",
+      "invoke": "0x4388c"
+    },
+    {
+      "block": "0xfd9cd0",
+      "invoke": "0x7aa4c"
+    }
+  ],
+  "main_dispatch_pointer_slot": "0xfd82e8",
+  "once_token": "0x1010a50",
+  "unresolved": [
+    "Indirect callers of blocks/registration helpers outside recovered startup route",
+    "Custom synchronous ObjC initializer/getter/setter implementations and UIKit reentry",
+    "Other lifecycle state writers and runtime swizzling",
+    "Control pointer global producer/owner lifetime beyond read at 0x1011b68"
+  ]
+}
