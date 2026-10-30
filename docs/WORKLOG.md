@@ -90,3 +90,13 @@ Append a new entry for each meaningful session. Keep older entries intact; corre
 - Corrections: rejected scale provider corrected to actual nativeScale selector; regression caught accidental factory-call substitution during parameterization and restored default arguments. No native input edited.
 - Evidence: [report](reports/OVERLAY-SIZE-ATTACHMENT-COMPOSITION.md), `../tests/continuation-i/test_overlay_attachment.py`, `../results/continuations/continuation-i/overlay-attachment-tests.json`.
 - Limits/next: ready caller not run through final return; nonnil R03 instrumentation, successful Menu texture/non-null INI, actual child callbacks, runtime lifetime/scheduling and control writers remain open. No actual GPU/device run, ownership/race proof or FPS/touch fix.
+
+## 2026-10-30 — Native normal return and Menu INI application
+
+- Agent: Notion AI; starting `3c48d6b68e5631bea93b49e1e57733eaf6979403`. Read-only local analysis, compact direct publication.
+- Executed final native Overlay cleanup/normal return including existing R03 wrapper/helpers, preserving unequal return window. Actual factory/once/normal-return reuse retains singleton and first control. R03 runtime method-add/lookup/main-thread request boundaries modeled; no methods actually installed and requested bubble callback not executed.
+- Executed native Menu nonnil-INI guard, defaults and state-apply helper chain with modeled integer reads/preinitialized state/no-op readIniConfig. Native applied flag prevents repeat reads in tested sequences, not arbitrary callback mutation.
+- New 31/31 passed; two equal and one unequal compared windows. Prior 30/30 composition regression rerun byte-identical; older native suites not rerun. Pinned dependencies restored. New-group integrity, changed links/syntax/JSON, present hashes and input identities checked; no full 795-record or whole-repository run.
+- Initial newly reached factory frame/autoresizing messages failed closed; added explicit modeled callbacks to new suite only. No shared harness or binary modifications.
+- Evidence: [report](reports/OVERLAY-NORMAL-RETURN-MENU-INI.md), `../tests/continuation-j/test_overlay_return_menu.py`, `../results/continuations/continuation-j/overlay-return-menu-tests.json`.
+- Next: requested bubble callback and successful Menu/child texture routes, actual control writers/lifetime, real GUI/GPU/scheduling and performance. Normal native caller return is not genuine backend/device success; no race/ownership proof, root cause or FPS/touch fix.
