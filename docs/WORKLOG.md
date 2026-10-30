@@ -72,3 +72,12 @@ Append a new entry for each meaningful session. Keep older entries intact; corre
 - New 34/34 passed with Python 3.13.15 / Capstone 5.0.7 / Unicorn 2.1.4. Older native suites not rerun. Group-g record integrity, changed links/syntax/JSON, present hashes and input identities checked; no full 698-record or whole-repository run.
 - Corrections: initial blanket byte-equality assertion failed on the real return-tail call difference. Retained both hashes and coverage evidence: inherited-nil visits the existing R03 trampoline with nil. Twelve windows equal, one unequal; no whole-binary equivalence claim.
 - Runtime/ARC/Metal/once boundaries modeled. No device failure, dangling pointer/delegate, lifetime/race proof, genuine backend success or FPS/touch improvement established. Next: remaining font/GUI/backend/size setup, nontrivial Menu backreference setter and state writers/deallocation.
+
+## 2026-10-30 — Configuration/font/backend continuation
+
+- Agent: Notion AI; starting `fa1acfb4f7641e48dbcb7a109e37748127b977b9`. Local read-only work, compact direct publication.
+- Extended native Overlay setup past the resource stop through Documents/imgui.ini path, IO flag/filename stores and native font-config constructors/required-result guards. Explicitly modeled GUI compatibility/context creation and font-add boundaries. Native backend initializer/helper executed separately with registration/device-object boundaries modeled.
+- New 36/36 passed, six equal code windows. Prior 34/34 resource-guard regression byte-identical after import-safe entry point/optional stop refactor. Other native suites not rerun. Group-h integrity, changed links/syntax/JSON, present hashes and input identities checked; no full 734-record or whole-repository run.
+- Findings: failed creation and nil UTF8/duplicate do not return early here; first/third fonts are required while intermediate merge result is not checked. Backend wrappers publish flags/name and return true even under zero modeled subordinate results; not genuine backend-success evidence.
+- Evidence: [report](reports/OVERLAY-CONFIG-FONTS-BACKEND.md), `../tests/continuation-h/test_overlay_config.py`, `../results/continuations/continuation-h/overlay-config-tests.json`.
+- Initial unmodeled retainAutorelease import failed closed; added explicit identity ARC boundary without lifetime claims. No binary edits, actual filesystem/GUI/GPU/device run, race/lifetime proof or FPS/touch fix. Next: actual size synchronization, attachment checks, late nontrivial Menu backreference and control-state writers/deallocation.
