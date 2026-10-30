@@ -43,3 +43,9 @@ Use existing captures, authorized inputs and read-only local analysis. No new di
 - [Reproduction](CONTINUATION-REPRODUCTION.md)
 - [Artifact/provenance manifest](CONTINUATION-ARTIFACTS.md)
 - [Omissions](OMISSIONS.md)
+
+## Startup/reentry continuation — 2026-10-30
+
+[New report](reports/STARTUP-REENTRY-BOUNDARIES.md): recovered image initializer → main-queue block → registration producer → once block → observer initialization. The remaining direct lifecycle forwarding chains fold into the known transition/background graph; no independent thread hop or reachable interruption is established. Added 58 scoped cases; reran the existing 64 scheduling and 110 attachment cases.
+
+**Next concrete priority:** trace the actual custom synchronous factory/initializer implementations reached by the admitted constructor, not just the now-resolved veneers. Preserve ordinary main-queue serialization and require positive reentry/state-writer evidence. The constructor's control value comes from `0x1011b68`; its actual producer, pointee lifetime and writers remain unresolved. No new diagnostic build is needed. [All supplied attachment occurrences](ATTACHMENT-INTAKE.md) are accounted for; omitted binaries/archives are not in Git.
