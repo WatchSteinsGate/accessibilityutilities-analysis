@@ -30,3 +30,7 @@ The new reports are repository editions: references to omitted local disassembly
 ## Scheduling continuation additions
 
 The scheduling report, two portable scripts, complete 64-case records and bounded static metadata are included. Local raw instruction windows, broad scratch reference files and unresolved-class debugging output are omitted; their role, corrected assumptions and limits are described in `reports/LIFECYCLE-SCHEDULING.md`. No proprietary binary, ZIP, backend/authentication implementation, secret or private download/session URI is added. The existing continuation-b helpers are reused unchanged.
+
+## Reattached source intake and startup/reentry continuation
+
+All nine supplied occurrences are identified in [attachment intake](ATTACHMENT-INTAKE.md), including duplicate workpacks and the R01 candidate. The exact standalone resize report is included as historical source. Archive-level identities/member counts and verified original/R03 member hashes are retained; this is not archive recovery from Git. Opaque source ZIPs, installable framework inputs, patch/apply/build/bypass content, raw disassembly and scratch pointer scans remain omitted. The R01 candidate was not executed. The reviewed new native scripts, all 58 case records and bounded static metadata are included instead. No secrets or attachment download/session paths are published.
