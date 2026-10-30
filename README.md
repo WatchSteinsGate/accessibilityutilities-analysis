@@ -23,7 +23,7 @@ Private, curated research handoff for a read-only integrity and overlay lifecycl
 
 ## What is verified locally
 
-The repository now retains nine investigation groups:
+The repository now retains ten investigation groups:
 
 | Group | Labeled scoped cases | Validation |
 | --- | ---: | --- |
@@ -35,9 +35,10 @@ The repository now retains nine investigation groups:
 | Factory/control-state continuation | 54 | Passed; rerun after main-guard refactor |
 | Complete Draw/Menu initializer effects | 46 | Passed in prior publication |
 | Overlay resource guards / failed singleton reuse | 34 | Passed; byte-identical regression rerun |
-| Overlay configuration / font guards / backend wrappers | 36 | New scoped run passed |
+| Overlay configuration / font guards / backend wrappers | 36 | Passed; byte-identical regression rerun |
+| Overlay size / backend / attachment composition | 30 | New scoped run passed |
 
-The configuration/font/backend pass adds **36 records**, bringing the stored total to **1028 labeled cases** (294 earlier + 734 continuation), not unique end-to-end paths. The new 36-case suite and prior 34-case guard regression passed; other native suites were not rerun. The continuation validator now expects 734 records across groups a–h; only group h was integrity-validated in this partial checkout. Native path/IO setup, font guards and standalone backend wrapper returns are covered with explicit provider boundaries. This does not establish a complete successful Overlay initializer or genuine GPU/backend success. [Latest findings and limits](docs/reports/OVERLAY-CONFIG-FONTS-BACKEND.md).
+The size/backend/attachment pass adds **30 records**, bringing the stored total to **1058 labeled cases** (294 earlier + 764 continuation), not unique end-to-end paths. The new 30-case suite and prior 34/36-case regressions passed with unchanged historical records; other older native suites were not rerun. The continuation validator expects 764 records across groups a–i; only group i was integrity-validated in this partial checkout. Native size/backend/optional attachment ordering now reaches the pre-return stop, with explicit runtime/provider boundaries. This is not a full successful initializer return or genuine GPU/backend success. [Latest findings and limits](docs/reports/OVERLAY-SIZE-ATTACHMENT-COMPOSITION.md).
 
 In the prior publication, the **nine scripts / 442 records** were rerun using the repository's pinned Capstone 5.0.7 and Unicorn 2.1.4. The then-resulting **736 stored labeled cases across those three groups** are not 736 unique or independent end-to-end paths. Counts include paired builds, synthetic inputs, repetitions, staged mutations and directly seeded cleanup states. Original session runs of the two new groups used Capstone 5.0.9; the portable rerun used 5.0.7.
 

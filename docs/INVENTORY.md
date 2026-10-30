@@ -25,6 +25,7 @@ Expanded reviewed text only; no proprietary binaries or opaque archives. `SHA256
 - `docs/reports/LIFECYCLE-SCHEDULING.md`
 - `docs/reports/OVERLAY-CONFIG-FONTS-BACKEND.md`
 - `docs/reports/OVERLAY-RESOURCE-GUARDS.md`
+- `docs/reports/OVERLAY-SIZE-ATTACHMENT-COMPOSITION.md`
 - `docs/reports/STARTUP-REENTRY-BOUNDARIES.md`
 - `docs/source-reports/Resize-layout-continuation.md`
 - `requirements.txt`
@@ -74,6 +75,7 @@ Expanded reviewed text only; no proprietary binaries or opaque archives. `SHA256
 - `results/continuations/continuation-f/initializer-tests.json`
 - `results/continuations/continuation-g/overlay-resource-tests.json`
 - `results/continuations/continuation-h/overlay-config-tests.json`
+- `results/continuations/continuation-i/overlay-attachment-tests.json`
 - `results/lifecycle/size-sync-tests.json`
 - `results/lifecycle/summary.json`
 - `results/lifecycle/view-lifecycle-tests.json`
@@ -111,6 +113,7 @@ Expanded reviewed text only; no proprietary binaries or opaque archives. `SHA256
 - `tests/continuation-f/test_initializer_effects.py`
 - `tests/continuation-g/test_overlay_resources.py`
 - `tests/continuation-h/test_overlay_config.py`
+- `tests/continuation-i/test_overlay_attachment.py`
 - `tests/macho.py`
 - `tests/native_env.py`
 - `tests/test_button_layout.py`
