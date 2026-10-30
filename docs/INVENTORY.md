@@ -1,6 +1,6 @@
 # Included file inventory
 
-All committed artifacts are expanded text; no proprietary binaries or opaque archives are included. `SHA256SUMS` covers every listed file except itself. Standing agent reporting is defined in [../AGENTS.md](../AGENTS.md); continuation scope, partitioning and provenance are indexed in [CONTINUATION-ARTIFACTS.md](CONTINUATION-ARTIFACTS.md).
+Expanded reviewed text only; no proprietary binaries or opaque archives. `SHA256SUMS` covers every listed file except itself. Follow [AGENTS.md](../AGENTS.md); see [artifact provenance](CONTINUATION-ARTIFACTS.md).
 
 - `.gitignore`
 - `AGENTS.md`
@@ -19,6 +19,7 @@ All committed artifacts are expanded text; no proprietary binaries or opaque arc
 - `docs/REPORT-TEMPLATE.md`
 - `docs/RESIZE-LAYOUT-CONTINUATION.md`
 - `docs/WORKLOG.md`
+- `docs/reports/LIFECYCLE-SCHEDULING.md`
 - `requirements.txt`
 - `results/continuations/continuation-a/cancellation-tests.json`
 - `results/continuations/continuation-a/cleanup-tail-tests.json`
@@ -52,6 +53,8 @@ All committed artifacts are expanded text; no proprietary binaries or opaque arc
 - `results/continuations/continuation-b/factory-attachment-tests/part-002.json`
 - `results/continuations/continuation-b/factory-tests.json`
 - `results/continuations/continuation-b/summary.json`
+- `results/continuations/continuation-c/scheduling-map.json`
+- `results/continuations/continuation-c/scheduling-tests.json`
 - `results/lifecycle/size-sync-tests.json`
 - `results/lifecycle/summary.json`
 - `results/lifecycle/view-lifecycle-tests.json`
@@ -80,6 +83,8 @@ All committed artifacts are expanded text; no proprietary binaries or opaque arc
 - `tests/continuation-b/test_completion.py`
 - `tests/continuation-b/test_factory.py`
 - `tests/continuation-b/test_factory_attachment.py`
+- `tests/continuation-c/map_scheduling.py`
+- `tests/continuation-c/test_scheduling.py`
 - `tests/macho.py`
 - `tests/native_env.py`
 - `tests/test_button_layout.py`

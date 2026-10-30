@@ -15,5 +15,5 @@ for p in sorted((ROOT/'results/continuations').glob('*/*-tests.json')):
  assert data['passed'] and len(records)==data['cases'],p
  total+=len(records)
  print(p.relative_to(ROOT),len(records),'records verified')
-assert total==442,total
-print('All 442 new scoped records verified; this is artifact integrity, not a runtime rerun.')
+assert total==506,total
+print('All 506 continuation scoped records verified; this is artifact integrity, not a runtime rerun.')

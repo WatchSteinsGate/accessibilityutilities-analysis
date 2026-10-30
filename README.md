@@ -9,6 +9,7 @@ Private, curated research handoff for a read-only integrity and overlay lifecycl
 - [What changed and what is next](docs/NEXT-STEPS.md): latest success-path tracing checkpoint.
 - [Cancellation, render cleanup and shortcut consumer](docs/CANCELLATION-RENDER-SHORTCUT.md): 232 additional scoped cases.
 - [Accepted attachment, singleton reuse and render completion](docs/ATTACHMENT-FACTORY-COMPLETION.md): 210 additional scoped cases.
+- [Lifecycle queue constraints and routing](docs/reports/LIFECYCLE-SCHEDULING.md): 64 further scoped cases; main-queue routes narrow, but do not settle, the reentry question.
 - [New-suite reproduction](docs/CONTINUATION-REPRODUCTION.md) and [artifact provenance](docs/CONTINUATION-ARTIFACTS.md).
 
 - [Continuation handoff](docs/HANDOFF.md): current conclusions, user-reported symptoms, decisions, and next steps.
@@ -20,15 +21,18 @@ Private, curated research handoff for a read-only integrity and overlay lifecycl
 
 ## What is verified locally
 
-The repository now retains three continuation groups:
+The repository now retains four continuation groups:
 
 | Group | Labeled scoped cases | Validation |
 | --- | ---: | --- |
 | Existing lifecycle + resize suites (5 scripts) | 294 | Previously validated; preserved unchanged |
 | Cancellation/render/shortcut continuation (4 scripts) | 232 | Fresh portable rerun passed |
 | Attachment/factory/completion continuation (5 scripts) | 210 | Fresh portable rerun passed |
+| Lifecycle scheduling continuation (1 test + static mapper) | 64 | New scoped run passed |
 
-The **nine new scripts / 442 new records** were rerun using the repository's pinned Capstone 5.0.7 and Unicorn 2.1.4. The resulting **736 stored labeled cases across the three groups** are not 736 unique or independent end-to-end paths. Counts include paired builds, synthetic inputs, repetitions, staged mutations and directly seeded cleanup states. Original session runs of the two new groups used Capstone 5.0.9; the portable rerun used 5.0.7.
+The scheduling pass adds **64 records**, bringing the stored total to **800 labeled cases** (294 + 442 + 64), not unique end-to-end paths. Its 64-case suite and static mapper ran with the pinned dependencies; the earlier 736 cases were not rerun in that pass. The indexed continuation validator now covers 506 records.
+
+In the prior publication, the **nine scripts / 442 records** were rerun using the repository's pinned Capstone 5.0.7 and Unicorn 2.1.4. The then-resulting **736 stored labeled cases across those three groups** are not 736 unique or independent end-to-end paths. Counts include paired builds, synthetic inputs, repetitions, staged mutations and directly seeded cleanup states. Original session runs of the two new groups used Capstone 5.0.9; the portable rerun used 5.0.7.
 
 Objective-C/UIKit, ARC, dispatch/once semantics, weak-reference results, journal and selected backend boundaries remain modeled. No real backend, iOS loader, Metal/GPU timing, asynchronous race, device FPS or physical touch latency is verified.
 
@@ -49,7 +53,7 @@ for suite in test_view_lifecycle test_size_sync test_geometry test_button_layout
 done
 ```
 
-Generated records go to ignored `results/generated/`; set `AU_RESULTS` to select another directory. Checked-in historical records are in `results/lifecycle/` and `results/resize/`; the earlier packaging-run records are in `results/portable-run/`. New portable results and per-suite scope/validation summaries are in `results/continuations/continuation-a/` and `results/continuations/continuation-b/`. Geometry/button records contain explicitly synthetic NaN/Infinity values using Python JSON numeric extensions; strict JSON consumers may need to normalize these.
+Generated records go to ignored `results/generated/`; set `AU_RESULTS` to select another directory. Checked-in historical records are in `results/lifecycle/` and `results/resize/`; the earlier packaging-run records are in `results/portable-run/`. New portable results and per-suite scope/validation summaries are in `results/continuations/continuation-a/` and `results/continuations/continuation-b/`; scheduling records/metadata are in `results/continuations/continuation-c/`. Geometry/button records contain explicitly synthetic NaN/Infinity values using Python JSON numeric extensions; strict JSON consumers may need to normalize these.
 
 Tests execute native instructions in **emulated memory** with stubbed runtime boundaries. They do not patch disk inputs, build a framework, contact a server, install an app, or exercise actual touch/action routing. The selector cache is declarative data, not a patch builder.
 
