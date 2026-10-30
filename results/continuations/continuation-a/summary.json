@@ -1,0 +1,32 @@
+{
+  "suite": "continuation-a",
+  "cases": 232,
+  "records": {
+    "cancellation-tests.json": {
+      "passed": true,
+      "cases": 94,
+      "scope": "Sequential native suspend/resume mutators plus constructor eligibility prefix; stopped before UI construction. Mutex boundaries and journal sink modeled. Reactivation and initial state seeded, not authenticated or end-to-end. No concurrency, real queued block ownership, UI effect, or timing proof."
+    },
+    "cleanup-tail-tests.json": {
+      "passed": true,
+      "cases": 10,
+      "scope": "Direct entry into five native exception landing-pad tails per build, with manually seeded frame locals and ownership counts. Stops at _Unwind_Resume; does not throw, select landing pads using unwind metadata, execute real unwinding, or establish Objective-C exception safety."
+    },
+    "lifecycle-queue-tests.json": {
+      "passed": true,
+      "cases": 24,
+      "scope": "Native coalescing helper and lifecycle callback; dispatch enqueue, Objective-C, ARC boundaries and final transition callee modeled. Application state changed after enqueue. No actual threads/queues/race proof; final 0x7b188 transition body not executed here."
+    },
+    "render-tests.json": {
+      "passed": true,
+      "cases": 104,
+      "scope": "Native original/R03 frame control flow, normal cleanup, shortcut callback, wrappers and R03 late guard. Objective-C getters/effects, clock, ARC accounting, ImGui/Metal frame and encoding callees, context/data results and journal sink modeled. Faults synthetic. No real ARC/UIKit/Metal, GPU submission, physical gesture/touch timing, exceptions or races."
+    }
+  },
+  "validation_environment": {
+    "python": "3.13",
+    "capstone": "5.0.7",
+    "unicorn": "2.1.4"
+  },
+  "provenance": "Fresh rerun of repository-adapted tests; original findings used Capstone 5.0.9. No original or R03 binary was modified. Counts are labeled model cases, not independent end-to-end paths."
+}

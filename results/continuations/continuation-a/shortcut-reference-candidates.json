@@ -1,0 +1,40 @@
+{
+  "scope": "Bounded original __text ADRP-window candidates; instruction windows deliberately omitted. Not exhaustive for indirect references.",
+  "records": [
+    {
+      "site": "0x6844e4",
+      "function_start": "0x684454",
+      "function_end": "0x6855c0"
+    },
+    {
+      "site": "0x686250",
+      "function_start": "0x685d6c",
+      "function_end": "0x686728"
+    },
+    {
+      "site": "0x686280",
+      "function_start": "0x685d6c",
+      "function_end": "0x686728"
+    },
+    {
+      "site": "0x686384",
+      "function_start": "0x685d6c",
+      "function_end": "0x686728"
+    },
+    {
+      "site": "0x6863b4",
+      "function_start": "0x685d6c",
+      "function_end": "0x686728"
+    },
+    {
+      "site": "0x686fe0",
+      "function_start": "0x686f8c",
+      "function_end": "0x687058"
+    },
+    {
+      "site": "0x687020",
+      "function_start": "0x686f8c",
+      "function_end": "0x687058"
+    }
+  ]
+}
