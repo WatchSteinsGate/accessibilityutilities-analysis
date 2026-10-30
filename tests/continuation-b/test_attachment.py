@@ -51,30 +51,36 @@ class Model:
    if transition=='suspend_resume':e.run(0x7b9a4,[(0,STATE)],stack_pointer=0x30010000)
    e.u.context_restore(saved);e.hit=None;e.stops={STOP};e.u.emu_start(stage,STOP+4,count=100000);assert e.hit==STOP
   return dict(final_parent=hex(self.parent),temporary_ownership_delta={hex(p):n for p,n in self.refs.items() if n},state_bytes=list(self.e.u.mem_read(STATE+0x50,5)),current_attempt=self.e.q(STATE+0x40),captured_attempt=self.e.q(BLOCK+32),events=self.events)
-rows=[]
-for build,m in [('original',O),('r03',P)]:
- for old_parent in [0,OLD,CHILD if m is O else GAME]:
-  for stage in [None,0x769b4,0x76a78,0x76b5c,0x76be8,0x76c4c,0x76cf8,0x76d80]:
-   for transition in ['suspend','suspend_resume'] if stage else ['none']:
-    model=Model(m);model.parent=old_parent;r=model.run(stage,transition)
-    assert model.parent==model.target
-    moves=[x['selector'] for x in model.events if x.get('selector') in ['removeFromSuperview','addSubview:']]
-    assert moves==([] if old_parent==model.target else ['removeFromSuperview','addSubview:'])
-    if stage:assert r['current_attempt']!=r['captured_attempt'] and r['state_bytes'][0]==0
-    expected={} if build=='original' else {hex(FIELD):1,hex(GAME):-1}
-    assert r['temporary_ownership_delta']==expected
-    rows.append(dict(test='acceptedCallbackAttachment',build=build,initial_parent=hex(old_parent),stage=hex(stage) if stage else None,transition=transition,**r))
- # Between removal and addition, only detached/wrong-parent cases can reach the stage.
- for stage in [0x76d38,0x76d48]:
-  for transition in ['suspend','suspend_resume']:
-   model=Model(m);model.parent=OLD;r=model.run(stage,transition);assert model.parent==model.target
-   rows.append(dict(test='cancellationBetweenDetachAndAttach',build=build,stage=hex(stage),transition=transition,**r))
- # Return-value faults at modeled factory boundaries, without manufacturing exceptions.
- for fault in ['field','child','overlay','MenuWindow','DrawWindow','FloatView']:
-  model=Model(m);model.parent=OLD;model.fault=fault;r=model.run();messages=[x for x in model.events if x['op']=='message'];adds=[x for x in messages if x['selector']=='addSubview:']
-  if fault in ['field','child'] and build=='original':assert not adds
-  elif fault=='overlay':assert len(adds)==1 and adds[0]['nil_child']
-  else:assert model.parent==model.target
-  rows.append(dict(test='constructorFactoryFailureBoundary',build=build,fault=fault,attempted_nil_child_add=any(x.get('nil_child') for x in adds),**r))
-result=dict(passed=True,cases=len(rows),scope='Native constructor callback and sequential/staged native suspend/resume mutators; Objective-C factories, hierarchy effects, geometry getters/setters, ARC accounting, mutex boundaries and journal sink modeled. Factory/init internals and UIKit exceptions not executed. Paused native callback register context restored around a separate-stack native lifecycle mutator; no real concurrency or asynchronous block ownership.',records=rows)
-(RESULTS/'attachment-tests.json').write_text(json.dumps(result,indent=2));print(json.dumps({k:v for k,v in result.items() if k!='records'},indent=2))
+def main():
+ rows=[]
+
+ for build,m in [('original',O),('r03',P)]:
+  for old_parent in [0,OLD,CHILD if m is O else GAME]:
+   for stage in [None,0x769b4,0x76a78,0x76b5c,0x76be8,0x76c4c,0x76cf8,0x76d80]:
+    for transition in ['suspend','suspend_resume'] if stage else ['none']:
+     model=Model(m);model.parent=old_parent;r=model.run(stage,transition)
+     assert model.parent==model.target
+     moves=[x['selector'] for x in model.events if x.get('selector') in ['removeFromSuperview','addSubview:']]
+     assert moves==([] if old_parent==model.target else ['removeFromSuperview','addSubview:'])
+     if stage:assert r['current_attempt']!=r['captured_attempt'] and r['state_bytes'][0]==0
+     expected={} if build=='original' else {hex(FIELD):1,hex(GAME):-1}
+     assert r['temporary_ownership_delta']==expected
+     rows.append(dict(test='acceptedCallbackAttachment',build=build,initial_parent=hex(old_parent),stage=hex(stage) if stage else None,transition=transition,**r))
+  # Between removal and addition, only detached/wrong-parent cases can reach the stage.
+  for stage in [0x76d38,0x76d48]:
+   for transition in ['suspend','suspend_resume']:
+    model=Model(m);model.parent=OLD;r=model.run(stage,transition);assert model.parent==model.target
+    rows.append(dict(test='cancellationBetweenDetachAndAttach',build=build,stage=hex(stage),transition=transition,**r))
+  # Return-value faults at modeled factory boundaries, without manufacturing exceptions.
+  for fault in ['field','child','overlay','MenuWindow','DrawWindow','FloatView']:
+   model=Model(m);model.parent=OLD;model.fault=fault;r=model.run();messages=[x for x in model.events if x['op']=='message'];adds=[x for x in messages if x['selector']=='addSubview:']
+   if fault in ['field','child'] and build=='original':assert not adds
+   elif fault=='overlay':assert len(adds)==1 and adds[0]['nil_child']
+   else:assert model.parent==model.target
+   rows.append(dict(test='constructorFactoryFailureBoundary',build=build,fault=fault,attempted_nil_child_add=any(x.get('nil_child') for x in adds),**r))
+ result=dict(passed=True,cases=len(rows),scope='Native constructor callback and sequential/staged native suspend/resume mutators; Objective-C factories, hierarchy effects, geometry getters/setters, ARC accounting, mutex boundaries and journal sink modeled. Factory/init internals and UIKit exceptions not executed. Paused native callback register context restored around a separate-stack native lifecycle mutator; no real concurrency or asynchronous block ownership.',records=rows)
+ (RESULTS/'attachment-tests.json').write_text(json.dumps(result,indent=2));print(json.dumps({k:v for k,v in result.items() if k!='records'},indent=2))
+
+
+if __name__ == "__main__":
+ main()
