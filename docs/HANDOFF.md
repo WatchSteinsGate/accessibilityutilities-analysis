@@ -59,3 +59,9 @@ Before any new work, confirm the two input hashes. Retain per-case assumptions a
 ## Existing private workspace record
 
 The fuller historical session context remains in the user's Notion workspace, titled “AccessibilityUtilities — Session context, patch audit & whole-system trace.” This repository is a curated continuation, not a complete export of that page or its private attachments. Deliberate omissions are listed separately. No automatic two-way sync is configured.
+
+## Latest continuation — startup registration and direct veneers
+
+Starting at `62d05c2`, startup initializer `0x43850` is recovered enqueueing block invoke `0x4388c` on the imported main queue. That callback reaches producer `0x438b8` and a once block invoking observer registration `0x7aa4c`. The previously unresolved direct suspend/transition wrappers belong to the known transition/background routes and add no queue hop. Custom synchronous ObjC implementations, indirect callers and other state writers remain unresolved; staged cancellation is still not a proven runtime race.
+
+Added 58 new native/model cases, bringing stored labeled cases to 858 (564 continuation + 294 earlier), not unique paths. Existing 64 scheduling and 110 attachment cases passed fresh reruns; other suites were not rerun. See [the focused report](reports/STARTUP-REENTRY-BOUNDARIES.md), [next steps](NEXT-STEPS.md) and [attachment intake](ATTACHMENT-INTAKE.md). No input binary edited, device performance fix claimed or modified release built.
