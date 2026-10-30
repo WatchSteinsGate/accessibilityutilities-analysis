@@ -1,0 +1,37 @@
+{
+  "suite": "continuation-b",
+  "cases": 210,
+  "records": {
+    "attachment-tests.json": {
+      "passed": true,
+      "cases": 110,
+      "scope": "Native constructor callback and sequential/staged native suspend/resume mutators; Objective-C factories, hierarchy effects, geometry getters/setters, ARC accounting, mutex boundaries and journal sink modeled. Factory/init internals and UIKit exceptions not executed. Paused native callback register context restored around a separate-stack native lifecycle mutator; no real concurrency or asynchronous block ownership."
+    },
+    "cache-guard-tests.json": {
+      "passed": true,
+      "cases": 16,
+      "scope": "Native enqueueReusableBuffer: entry guard and rejecting normal exits, or stop before accepted cache-body synchronization. Underlying buffer/length getters and ARC accounting modeled. Accepted cache insertion, locking, enumeration, capacity policy and real allocator/Metal behavior not executed."
+    },
+    "completion-tests.json": {
+      "passed": true,
+      "cases": 60,
+      "scope": "Native completion-block copy/dispose/invoke helpers with manually prepared blocks. ARC counters, zeroing-weak resolutions and enqueueReusableBuffer: effect modeled. A live-to-nil weak sequence is forced, not proven reachable under real owner lifetime. Native buffer-cache insertion, GPU completion, actual Blocks runtime copying and concurrency not executed."
+    },
+    "factory-attachment-tests.json": {
+      "passed": true,
+      "cases": 12,
+      "scope": "Native admitted constructor composed with native shared factory/once block/publication prefix, then native suspend on a separate stack before callback resumes. Each invocation starts from seeded eligible state. dispatch_once, ObjC/runtime, rest of init, property ownership and hierarchy effects remain modeled; attempted addSubview:nil is recorded without throwing. No asynchronous/runtime proof."
+    },
+    "factory-tests.json": {
+      "passed": true,
+      "cases": 12,
+      "scope": "Native shared factory, native once block and native initializer publication prefix. dispatch_once completion/token state modeled explicitly; no real dispatch_once or concurrency. Allocation, rest of initialization, ObjC property implementations, ARC and journal boundaries modeled. Pointer identities are symbolic; no real pointer lifetime guarantee."
+    }
+  },
+  "validation_environment": {
+    "python": "3.13",
+    "capstone": "5.0.7",
+    "unicorn": "2.1.4"
+  },
+  "provenance": "Fresh rerun of repository-adapted tests; original findings used Capstone 5.0.9. No original or R03 binary was modified. Counts are labeled model cases, not independent end-to-end paths."
+}
