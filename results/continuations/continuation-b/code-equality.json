@@ -1,0 +1,44 @@
+[
+  {
+    "entry": "0x68401c",
+    "start": "0x68401c",
+    "end": "0x684380",
+    "byte_identical": true
+  },
+  {
+    "entry": "0x684380",
+    "start": "0x684380",
+    "end": "0x684408",
+    "byte_identical": true
+  },
+  {
+    "entry": "0x12e2d0",
+    "start": "0x12e2d0",
+    "end": "0x12ecf8",
+    "byte_identical": true
+  },
+  {
+    "entry": "0x12edb8",
+    "start": "0x12edb8",
+    "end": "0x12eea8",
+    "byte_identical": true
+  },
+  {
+    "entry": "0x12eea8",
+    "start": "0x12eea8",
+    "end": "0x12ef14",
+    "byte_identical": true
+  },
+  {
+    "entry": "0x12ef14",
+    "start": "0x12ef14",
+    "end": "0x12ef70",
+    "byte_identical": true
+  },
+  {
+    "entry": "0x12c06c",
+    "start": "0x12c06c",
+    "end": "0x12c798",
+    "byte_identical": true
+  }
+]

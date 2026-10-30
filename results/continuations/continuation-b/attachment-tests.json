@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "cases": 110,
+  "scope": "Native constructor callback and sequential/staged native suspend/resume mutators; Objective-C factories, hierarchy effects, geometry getters/setters, ARC accounting, mutex boundaries and journal sink modeled. Factory/init internals and UIKit exceptions not executed. Paused native callback register context restored around a separate-stack native lifecycle mutator; no real concurrency or asynchronous block ownership.",
+  "recordFormat": "partitioned-v1",
+  "parts": [
+    {
+      "path": "attachment-tests/part-001.json",
+      "records": 11,
+      "sha256": "d48de2170521a17f14fde02d8184527e9d113710a5c763c995b0b8961538c8d2"
+    },
+    {
+      "path": "attachment-tests/part-002.json",
+      "records": 11,
+      "sha256": "2580a32a6de80e8fa0d5bcd70c623421ef2077636e8aadebff0e5d8e272c59f4"
+    },
+    {
+      "path": "attachment-tests/part-003.json",
+      "records": 11,
+      "sha256": "49ba7c8d2bafa3ee685d5603593dad8f959cf8a0f4adc8dc33cde8f4c12b59f9"
+    },
+    {
+      "path": "attachment-tests/part-004.json",
+      "records": 12,
+      "sha256": "36aca52c83790e9d5677bb9ad8a257c028f4822c2295d04c43a8237aafb578fd"
+    },
+    {
+      "path": "attachment-tests/part-005.json",
+      "records": 12,
+      "sha256": "501eedacc1b53c93ad50d1b5e3f0ab191f01a36f8f517231cb461e2c3b7f866f"
+    },
+    {
+      "path": "attachment-tests/part-006.json",
+      "records": 12,
+      "sha256": "edd4a49657ecd1b269374d47522a0e8876fce0010055770ff56f1ef11bbabc7c"
+    },
+    {
+      "path": "attachment-tests/part-007.json",
+      "records": 12,
+      "sha256": "4a87bb70112206d116980fb12845147f9899975517fa64779a71c8b13ec91bf5"
+    },
+    {
+      "path": "attachment-tests/part-008.json",
+      "records": 13,
+      "sha256": "e1ecbeccdbfe5e6b966b6ccf107f980649599a0e4c1cb9b6278411099d983a5e"
+    },
+    {
+      "path": "attachment-tests/part-009.json",
+      "records": 13,
+      "sha256": "a62a5b97adfc8242e83502a723e7906faf20329d3ce969e53ded01da7fb7494c"
+    },
+    {
+      "path": "attachment-tests/part-010.json",
+      "records": 3,
+      "sha256": "1a2a48be26b0610855e5d160680d83171bf7dd6cfd6de1cd75f8086669f4833b"
+    }
+  ]
+}
