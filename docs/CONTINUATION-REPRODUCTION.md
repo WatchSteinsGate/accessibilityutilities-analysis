@@ -70,3 +70,7 @@ Run `python tests/continuation-f/test_initializer_effects.py`, then `python tool
 ## Overlay resource guards (34 records)
 
 Run `python tests/continuation-g/test_overlay_resources.py` with authorized inputs, then `python tools/validate-continuation-results.py --group continuation-g`. Default generated directory `results/generated/continuation-g/`, overridden by `AU_RESULTS`. New 34/34 passed; older native suites not rerun. The default validator now requires 698 records; only group g was integrity-validated. [Scope and preserved return-tail inequality](reports/OVERLAY-RESOURCE-GUARDS.md). Successful prefix stops before `0x6849f8`, not at a complete Overlay/backend success.
+
+## Configuration/font/backend contracts (36 records)
+
+Run `python tests/continuation-h/test_overlay_config.py` and `python tools/validate-continuation-results.py --group continuation-h` with authorized inputs. Default `results/generated/continuation-h/`, overridden by `AU_RESULTS`. Native/model 36/36 passed; resource-guard 34/34 regression rerun byte-identical after import-safe refactor. Older native suites not rerun. Default validator expects 734 records; only group h integrity-validated this pass. [Explicit GUI/font/backend provider boundaries](reports/OVERLAY-CONFIG-FONTS-BACKEND.md). Ready font paths stop before size synchronization; backend-wrapper tests are standalone, not full Overlay/backend success.

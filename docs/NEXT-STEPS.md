@@ -67,3 +67,9 @@ Next remains actual OverlayView initialization and control-state deallocation/re
 [34 new native/model cases](reports/OVERLAY-RESOURCE-GUARDS.md) execute actual Overlay resource failures and actual factory/once composition. Completed-once nil does not retry after modeled providers recover. Raw control and Draw/Menu/Float stores precede inherited init; delegate assignment precedes queue/loader failure. No actual failure, dangling delegate or FPS cause is established. The successful-resource prefix stops before `0x6849f8`.
 
 Next: continue font/GUI/backend/size setup beyond that stop and trace nontrivial MenuWindow `setOverlayView:` plus control-state writers/lifetime. Preserve the unequal original/R03 return-tail window; inherited-nil cases visit the existing R03 trampoline with nil, not its nonnil behavior.
+
+## Configuration/font/backend follow-up
+
+[36 new cases](reports/OVERLAY-CONFIG-FONTS-BACKEND.md): native Documents/imgui.ini path and IO stores continue after modeled create/UTF8/duplicate failures; required first/third font nil returns nil, intermediate merge nil does not stop this caller. Standalone native backend wrappers return literal true despite zero modeled subordinate results, so their return/flags do not prove GPU setup success.
+
+Next: actual size synchronization and parent/child checks through the late nontrivial Menu backreference setter. GUI context/font/device-object providers and ownership/writers remain open; no whole successful Overlay initializer or runtime performance fix. Prior 34-case guard regression remains byte-identical.
