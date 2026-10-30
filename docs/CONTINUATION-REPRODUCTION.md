@@ -43,3 +43,18 @@ python tools/validate-continuation-results.py
 ```
 
 The scheduling pass ran only its new 64-case suite and static mapper with Python 3.13 / Capstone 5.0.7 / Unicorn 2.1.4. It did not rerun the older suites. Its complete records and metadata are under `results/continuations/continuation-c/`. The validator now checks 506 indexed continuation records (442 earlier + 64 scheduling); this is record integrity, not a runtime rerun. Read [the report](reports/LIFECYCLE-SCHEDULING.md) for the explicitly skipped producer body, modeled transition boundary and unresolved runtime scheduling.
+
+## Startup/reentry boundary continuation (58 records)
+
+`tests/continuation-d/` reuses continuation-b helpers and the now-importable `test_attachment.Model`. Running the existing attachment script still executes all 110 original cases; importing its model no longer executes its suite. Set authorized input paths as above, then:
+
+```bash
+python tests/continuation-d/test_reentry_boundaries.py
+python tests/continuation-d/map_reentry_boundaries.py
+python tools/validate-continuation-results.py --group continuation-d
+python tools/validate-attachment-intake.py
+```
+
+Default generated output is `results/generated/continuation-d/`; `AU_RESULTS` overrides it. New published records live in `results/continuations/continuation-d/`. The 58-case suite and mapper passed with Python 3.13.15 / Capstone 5.0.7 / Unicorn 2.1.4; existing scheduling (64) and attachment (110) suites were rerun. Other suites were not. The new record index retains every record in hashed JSON parts.
+
+Default validator scope now requires 564 continuation records across groups a–d. `--group` explicitly validates one group's expected total in a partial checkout; it is not a full validation claim. Only group d was integrity-validated this pass. See [report](reports/STARTUP-REENTRY-BOUNDARIES.md) for modeled once completion, non-executed observer body at the routing boundary and unresolved actual reentry. The exact [source resize report](source-reports/Resize-layout-continuation.md) is historical, not a replacement for portable reproduction.
