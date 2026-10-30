@@ -62,3 +62,7 @@ Default validator scope now requires 564 continuation records across groups a–
 ## Factory/control-state continuation (54 records)
 
 With authorized input paths configured, run `python tests/continuation-e/test_factories.py`, then `python tools/validate-continuation-results.py --group continuation-e`. Defaults to `results/generated/continuation-e/`; published complete records are under `results/continuations/continuation-e/`. Python 3.13.15 / Capstone 5.0.7 / Unicorn 2.1.4; 54 cases passed, twelve equal windows and one expected producer-window discrepancy retained. Older native suites were not rerun. Full default integrity validation now requires 618 continuation records; only group e was checked this pass. Read [scope and modeled boundaries](reports/FACTORY-CONTROL-PROVENANCE.md).
+
+## Complete Draw/Menu initializer effects (46 records)
+
+Run `python tests/continuation-f/test_initializer_effects.py`, then `python tools/validate-continuation-results.py --group continuation-f`, with authorized inputs configured. Defaults to `results/generated/continuation-f/`; `AU_RESULTS` overrides it. Existing group-e model is now importable without executing its suite; its 54-case regression passed with byte-identical records. New 46 cases and four equality windows passed with pinned dependencies. Only group f was integrity-validated; full default now requires 664 records. See [modeled providers and corrections](reports/INITIALIZER-EFFECTS.md).

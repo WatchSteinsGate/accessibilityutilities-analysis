@@ -55,3 +55,9 @@ Use existing captures, authorized inputs and read-only local analysis. No new di
 [54 new cases](reports/FACTORY-CONTROL-PROVENANCE.md) compose four native singleton factories/once blocks, full FloatView/FieldView initializer bodies and the DrawWindow publication prefix. Slot `0x1011b68` has a recovered 256-byte allocation/publication excerpt; existing-slot reuse skips allocation. Whole-owner lifetime is not established. The producer excerpt differs between builds despite the selected shared contracts passing.
 
 Next: trace deallocation/replacement and pointee writers; continue actual MenuWindow/OverlayView initialization and the DrawWindow remainder for concrete reentry/state-writer evidence. No real race or performance fix is established. Older native suites were not rerun in this pass.
+
+## Complete Draw/Menu initializer follow-up
+
+[46 new cases](reports/INITIALIZER-EFFECTS.md) now execute both complete native initializer normal/false/nil-return bodies with external runtime/filesystem/INI boundaries modeled. Draw still performs setup and size reset after modeled inherited nil. Menu ignores file-creation Boolean failure and performs configuration work before inherited init. Native once composition prevents repeating that work in the tested later factory calls, not universally.
+
+Next remains actual OverlayView initialization and control-state deallocation/replacement/pointee writers. No real runtime reentry, lifetime or device-performance diagnosis is established. Existing 54-case factory suite rerun unchanged; other older native suites not rerun.

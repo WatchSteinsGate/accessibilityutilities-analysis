@@ -69,3 +69,7 @@ Added 58 new native/model cases, bringing stored labeled cases to 858 (564 conti
 ## Factory/control-state follow-up
 
 See [focused report](reports/FACTORY-CONTROL-PROVENANCE.md): 54 new passing scoped native/model cases. Four native factories and once blocks composed; FloatView/FieldView initializer normal/nil-return bodies executed, DrawWindow stopped at control publication, MenuWindow initializer still modeled. A concrete producer excerpt allocates 256 bytes and publishes slot `0x1011b68`; repeated/existing-slot execution skips allocation. Deallocation/replacement and real pointee lifetime remain open. Twelve selected windows match, one producer window differs. Stored totals: 618 continuation + 294 earlier = 912 labeled cases, not end-to-end paths. No older native suites rerun or device/performance fix claimed.
+
+## Complete Draw/Menu initializer follow-up
+
+[Report](reports/INITIALIZER-EFFECTS.md): 46 additional scoped cases, complete Draw/Menu native initializer normal/false/nil-return bodies and native once composition. File creation false is not an early exit; Menu config effects precede inherited init. Draw setup/control publication/size reset also occur before returning modeled inherited nil. Foundation/INI/ARC/once/inherited runtime remain modeled. Prior factory 54-case records are byte-identical after main-guard refactor. Totals: 664 continuation + 294 earlier = 958 labeled records, not end-to-end paths. Overlay initialization and real control-state ownership/writers remain open.
