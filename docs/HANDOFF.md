@@ -15,6 +15,9 @@ The user prefers concrete local tracing and verification over reassurance and do
 5. Resize continuation added 150 cases for geometry, numerical edge behavior, button cache/failure/clamp behavior, and one-level staged reentry.
 6. Repository packaging removed historical path dependencies from the five benign continuation scripts. Fresh local results are retained separately from historical records. No binary was edited or installed during these continuation/packaging passes.
 
+7. Cancellation/render/shortcut continuation added 232 scoped cases, extending into sequential cancellation, lifecycle queue drain, frame failures/recovery, immediate shortcut consumers and bounded cleanup tails.
+8. Attachment/factory/completion continuation added 210 cases, including post-admission attachment, native singleton reuse, completion capture helpers and cache-admission guards. Nine portable scripts were rerun successfully with pinned dependencies; the original five suites remain unchanged.
+
 ## Conclusions to carry forward
 
 - Lifecycle readiness depends on application state and notifications; do not equate it with a license/server success flag.
@@ -28,13 +31,24 @@ The user prefers concrete local tracing and verification over reassurance and do
 - The original resize guard suppresses nested original setters in staged tests. It does not cover the appended button helper. Real UIKit-triggered recursion, exceptions, races, and cost remain unknown.
 - Local synthetic zero/NaN/infinite geometry reveals setter/publication differences; it is not evidence that such values caused the user's slowdown.
 
+## Latest findings
+
+- Original queued callbacks reject a stale captured generation at admission. Already-admitted callbacks can still reach attachment after a staged native cancellation; runtime reachability of that interleaving is **not established**.
+- Native singleton reuse avoids repeated allocation in the tested once sequence but still performs geometry and drawing-reference updates. Reuse does not refresh the first initializer-published shortcut control pointer when later calls pass different symbolic pointers; actual changed inputs/dangling lifetime are not established.
+- Immediate shortcut-to-menu-draw consumption is traced. Repeated qualifying callbacks set the byte to 1, not a direct toggle. Pointee lifetime and other writers remain open.
+- Synthetic frame resource failures reached normal cleanup/recovery in the scoped model. R03's late guard bounds submission only at its observation point; it does not cancel already performed work or every later state change.
+- Native completion helpers strongly capture two buffers and weakly resolve their context twice; copied captures persist until block disposal in the modeled lifecycle. Actual GPU completion/Blocks/ARC behavior is not established.
+- Native cache admission rejects nil wrapper/underlying buffer and lengths above 16 MiB; accepted cases stop before locking/insertion. This is not the full cache policy.
+
 ## Next work, in order
 
-1. **Lifecycle cancellation and stale queued callbacks:** compose queued work with detach/background/epoch changes under legitimate state. Separate native checks from modeled scheduling assumptions; do not infer real races from a chosen sequence alone.
-2. **Render resource failure and cleanup:** enumerate ordinary acquisition/early-return/cleanup exits and object lifetime boundaries. No GPU or device timing claim without real evidence.
-3. **Shortcut request consumer:** trace the existing signal through legitimate presentation state. Do not alter input policy or force access-gated paths.
-4. **Broader graph:** unresolved worker fan-out, indirect callbacks/runtime targets, and producer of a secondary setup request remain. Keep these marked open.
-5. **Genuine backend-to-state transitions:** unresolved and outside the bounded local tests. Do not substitute a stand-in result for authenticated backend behavior or extend authentication/trust/anti-cheat circumvention.
+1. **Reachable scheduling/reentry:** identify actual runtime routes that could interleave lifecycle changes after admission; preserve main-queue serialization constraints rather than assuming a race from staged mutation.
+2. **Control-pointer lifetime:** establish its actual producer/owner, caller invariants and other pointee writers. Do not infer a dangling pointer solely from singleton reuse.
+3. **Backend draw and completion composition:** extend native draw-loop/resource-failure analysis and completion registration/copy contracts. GPU delivery and command-buffer error outcomes remain unverified.
+4. **Accepted cache body:** trace insertion, enumeration, eviction and reuse under legitimate state. The entry-size guard is only a prefix.
+5. **Broader success graph:** resolve secondary setup-word producer, workers and indirect runtime targets; keep unresolved genuine backend/security transitions clearly outside the validated local scope.
+
+The earlier cancellation, resource cleanup and immediate shortcut-consumer entries are now **partially advanced**, not universally closed. Detailed next actions and evidence boundaries are maintained in [NEXT-STEPS.md](NEXT-STEPS.md).
 
 Before any new work, confirm the two input hashes. Retain per-case assumptions and failures. Do not build or distribute a modified release, claim complete original equivalence, or claim a fixed FPS/touch problem.
 
