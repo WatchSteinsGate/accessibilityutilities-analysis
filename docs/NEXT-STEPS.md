@@ -61,3 +61,9 @@ Next: trace deallocation/replacement and pointee writers; continue actual MenuWi
 [46 new cases](reports/INITIALIZER-EFFECTS.md) now execute both complete native initializer normal/false/nil-return bodies with external runtime/filesystem/INI boundaries modeled. Draw still performs setup and size reset after modeled inherited nil. Menu ignores file-creation Boolean failure and performs configuration work before inherited init. Native once composition prevents repeating that work in the tested later factory calls, not universally.
 
 Next remains actual OverlayView initialization and control-state deallocation/replacement/pointee writers. No real runtime reentry, lifetime or device-performance diagnosis is established. Existing 54-case factory suite rerun unchanged; other older native suites not rerun.
+
+## Overlay resource-guard follow-up
+
+[34 new native/model cases](reports/OVERLAY-RESOURCE-GUARDS.md) execute actual Overlay resource failures and actual factory/once composition. Completed-once nil does not retry after modeled providers recover. Raw control and Draw/Menu/Float stores precede inherited init; delegate assignment precedes queue/loader failure. No actual failure, dangling delegate or FPS cause is established. The successful-resource prefix stops before `0x6849f8`.
+
+Next: continue font/GUI/backend/size setup beyond that stop and trace nontrivial MenuWindow `setOverlayView:` plus control-state writers/lifetime. Preserve the unequal original/R03 return-tail window; inherited-nil cases visit the existing R03 trampoline with nil, not its nonnil behavior.

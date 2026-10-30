@@ -23,7 +23,7 @@ Private, curated research handoff for a read-only integrity and overlay lifecycl
 
 ## What is verified locally
 
-The repository now retains seven investigation groups:
+The repository now retains eight investigation groups:
 
 | Group | Labeled scoped cases | Validation |
 | --- | ---: | --- |
@@ -33,9 +33,10 @@ The repository now retains seven investigation groups:
 | Lifecycle scheduling continuation (1 test + static mapper) | 64 | Passed; rerun in startup pass |
 | Startup/reentry boundary continuation (1 test + static mapper) | 58 | Passed in prior publication |
 | Factory/control-state continuation | 54 | Passed; rerun after main-guard refactor |
-| Complete Draw/Menu initializer effects | 46 | New scoped run passed |
+| Complete Draw/Menu initializer effects | 46 | Passed in prior publication |
+| Overlay resource guards / failed singleton reuse | 34 | New scoped run passed |
 
-The complete Draw/Menu initializer pass adds **46 records**, bringing the stored total to **958 labeled cases** (294 + 442 + 64 + 58 + 54 + 46), not unique end-to-end paths. The new 46-case suite and existing 54-case factory regression passed; other native suites were not rerun. The continuation validator now expects 664 records across groups a–f; only group f was integrity-validated in this partial checkout. [Latest findings and limits](docs/reports/INITIALIZER-EFFECTS.md).
+The Overlay resource-guard pass adds **34 records**, bringing the stored total to **992 labeled cases** (294 earlier + 698 continuation), not unique end-to-end paths. The new 34-case suite passed; older native suites were not rerun. The continuation validator now expects 698 records across groups a–g; only group g was integrity-validated in this partial checkout. Twelve compared windows are equal and one return-tail window genuinely differs. Successful-resource cases stop before later GUI/backend setup. [Latest findings and limits](docs/reports/OVERLAY-RESOURCE-GUARDS.md).
 
 In the prior publication, the **nine scripts / 442 records** were rerun using the repository's pinned Capstone 5.0.7 and Unicorn 2.1.4. The then-resulting **736 stored labeled cases across those three groups** are not 736 unique or independent end-to-end paths. Counts include paired builds, synthetic inputs, repetitions, staged mutations and directly seeded cleanup states. Original session runs of the two new groups used Capstone 5.0.9; the portable rerun used 5.0.7.
 

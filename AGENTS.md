@@ -40,7 +40,7 @@ Documentation-only work still needs a worklog entry and integrity/navigation upd
 ## 5. Validate before publishing
 
 - Run the affected suites with the pinned dependencies; list exact commands, versions, counts and failures. Do not claim older untouched suites were rerun if they were not.
-- Run `python tools/validate-continuation-results.py` for the existing indexed records. It currently expects the published 664-record continuation dataset (442 earlier + 64 scheduling + 58 startup/reentry + 54 factory/control-state + 46 initializer effects); use `--group continuation-f` only for explicitly scoped partial-checkout validation; if deliberately expanding its scope, update that expectation and documentation transparently rather than ignoring a failure.
+- Run `python tools/validate-continuation-results.py` for the existing indexed records. It currently expects the published 698-record continuation dataset (442 earlier + 64 scheduling + 58 startup/reentry + 54 factory/control-state + 46 initializer effects + 34 Overlay resource guards); use `--group continuation-g` only for explicitly scoped partial-checkout validation; if deliberately expanding its scope, update that expectation and documentation transparently rather than ignoring a failure.
 - Check documentation links, Python syntax, artifact manifests and `sha256sum -c SHA256SUMS` from a complete checkout. Clearly distinguish a partial local/staged-file checksum check from checking every repository file.
 - Review the diff for unintended edits, missing records and secrets. Retain failed-test explanations/harness corrections in the report, not as unexamined success claims.
 - For docs-only changes, say that research tests were not rerun and validate the changed documentation/integrity files instead.

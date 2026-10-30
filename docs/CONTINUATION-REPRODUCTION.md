@@ -66,3 +66,7 @@ With authorized input paths configured, run `python tests/continuation-e/test_fa
 ## Complete Draw/Menu initializer effects (46 records)
 
 Run `python tests/continuation-f/test_initializer_effects.py`, then `python tools/validate-continuation-results.py --group continuation-f`, with authorized inputs configured. Defaults to `results/generated/continuation-f/`; `AU_RESULTS` overrides it. Existing group-e model is now importable without executing its suite; its 54-case regression passed with byte-identical records. New 46 cases and four equality windows passed with pinned dependencies. Only group f was integrity-validated; full default now requires 664 records. See [modeled providers and corrections](reports/INITIALIZER-EFFECTS.md).
+
+## Overlay resource guards (34 records)
+
+Run `python tests/continuation-g/test_overlay_resources.py` with authorized inputs, then `python tools/validate-continuation-results.py --group continuation-g`. Default generated directory `results/generated/continuation-g/`, overridden by `AU_RESULTS`. New 34/34 passed; older native suites not rerun. The default validator now requires 698 records; only group g was integrity-validated. [Scope and preserved return-tail inequality](reports/OVERLAY-RESOURCE-GUARDS.md). Successful prefix stops before `0x6849f8`, not at a complete Overlay/backend success.
