@@ -4,6 +4,11 @@ Private, curated research handoff for a read-only integrity and overlay lifecycl
 
 ## Start here
 
+- [What changed and what is next](docs/NEXT-STEPS.md): latest success-path tracing checkpoint.
+- [Cancellation, render cleanup and shortcut consumer](docs/CANCELLATION-RENDER-SHORTCUT.md): 232 additional scoped cases.
+- [Accepted attachment, singleton reuse and render completion](docs/ATTACHMENT-FACTORY-COMPLETION.md): 210 additional scoped cases.
+- [New-suite reproduction](docs/CONTINUATION-REPRODUCTION.md) and [artifact provenance](docs/CONTINUATION-ARTIFACTS.md).
+
 - [Continuation handoff](docs/HANDOFF.md): current conclusions, user-reported symptoms, decisions, and next steps.
 - [Integrity and whole-system summary](docs/INTEGRITY-AND-TRACE.md): input identities, structural coverage, evidence boundaries, and unresolved branches.
 - [Overlay lifecycle report](docs/LIFECYCLE-CONTINUATION.md): 144 scoped native-instruction cases.
@@ -13,13 +18,23 @@ Private, curated research handoff for a read-only integrity and overlay lifecycl
 
 ## What is verified locally
 
-The five included test scripts cover **294 scoped cases** across lifecycle, size-sync scheduling, geometry, added-button layout/cache behavior, and staged reentry. Counts include paired builds, synthetic inputs, and repeated calls, not 294 independent end-to-end launches. Objective-C/UIKit, ownership, journal, and dispatch boundaries are modeled. No real backend, iOS loader, Metal/GPU timing, asynchronous races, device FPS, or physical touch latency is verified.
+The repository now retains three continuation groups:
+
+| Group | Labeled scoped cases | Validation |
+| --- | ---: | --- |
+| Existing lifecycle + resize suites (5 scripts) | 294 | Previously validated; preserved unchanged |
+| Cancellation/render/shortcut continuation (4 scripts) | 232 | Fresh portable rerun passed |
+| Attachment/factory/completion continuation (5 scripts) | 210 | Fresh portable rerun passed |
+
+The **nine new scripts / 442 new records** were rerun using the repository's pinned Capstone 5.0.7 and Unicorn 2.1.4. The resulting **736 stored labeled cases across the three groups** are not 736 unique or independent end-to-end paths. Counts include paired builds, synthetic inputs, repetitions, staged mutations and directly seeded cleanup states. Original session runs of the two new groups used Capstone 5.0.9; the portable rerun used 5.0.7.
+
+Objective-C/UIKit, ARC, dispatch/once semantics, weak-reference results, journal and selected backend boundaries remain modeled. No real backend, iOS loader, Metal/GPU timing, asynchronous race, device FPS or physical touch latency is verified.
 
 The original is the **supplied reference workpack**, not independently publisher-authenticated code. Neither input binary is included. The investigation remains incomplete; see the handoff for the next unresolved work.
 
 ## Reproduce the bounded tests
 
-Use Python 3 with the pinned dependencies. The repository packaging was rerun locally with Python 3.13, Capstone 5.0.7, and Unicorn 2.1.4; all 294 cases passed. Provide only inputs you are authorized to analyze. The harness rejects files whose SHA-256 differs from the two recorded identities.
+Use Python 3 with the pinned dependencies. The earlier five-suite packaging run used Python 3.13, Capstone 5.0.7, and Unicorn 2.1.4; its 294 records are preserved. The nine new suites passed a fresh portable rerun with those same pinned dependencies; see [new-suite reproduction](docs/CONTINUATION-REPRODUCTION.md). Provide only inputs you are authorized to analyze. The harness rejects files whose SHA-256 differs from the two recorded identities.
 
 ```bash
 python -m venv .venv
@@ -32,7 +47,7 @@ for suite in test_view_lifecycle test_size_sync test_geometry test_button_layout
 done
 ```
 
-Generated records go to ignored `results/generated/`; set `AU_RESULTS` to select another directory. Checked-in historical records are in `results/lifecycle/` and `results/resize/`; fresh packaging-run records are in `results/portable-run/`. Geometry/button records contain explicitly synthetic NaN/Infinity values using Python JSON numeric extensions; strict JSON consumers may need to normalize these.
+Generated records go to ignored `results/generated/`; set `AU_RESULTS` to select another directory. Checked-in historical records are in `results/lifecycle/` and `results/resize/`; the earlier packaging-run records are in `results/portable-run/`. New portable results and per-suite scope/validation summaries are in `results/continuations/continuation-a/` and `results/continuations/continuation-b/`. Geometry/button records contain explicitly synthetic NaN/Infinity values using Python JSON numeric extensions; strict JSON consumers may need to normalize these.
 
 Tests execute native instructions in **emulated memory** with stubbed runtime boundaries. They do not patch disk inputs, build a framework, contact a server, install an app, or exercise actual touch/action routing. The selector cache is declarative data, not a patch builder.
 

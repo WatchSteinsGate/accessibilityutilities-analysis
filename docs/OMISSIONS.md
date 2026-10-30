@@ -20,3 +20,9 @@ The five test scripts were adapted from the recent read-only local suites. Share
 Historical result JSON is preserved in two subdirectories. The fresh packaging rerun is separate in `results/portable-run/`, with its own summary. Case counts include repetitions and build pairs; models are not real UIKit/backend/device execution.
 
 The user's fuller Notion context and private retained local artifacts remain separate. This commit does not move, delete, or automatically synchronize them. Future additions should maintain these boundaries and be reviewed for secrets and redistribution rights.
+
+## New success-path continuation additions
+
+The two new reports, nine portable read-only test suites and their modeled-case records were reviewed and added in expanded text form. Original evidence ZIPs are **not** uploaded verbatim; benign scripts/results were selected and adapted. Raw proprietary disassembly, symbol dumps, full function indices, source binaries, historical download links, patch/build/install tooling and private session material remain excluded under the policy above.
+
+The new reports are repository editions: references to omitted local disassembly/ZIP packaging were corrected, reproduction uses `AU_ORIGINAL` / `AU_R03`, results use `AU_RESULTS`, and fresh portable reruns use the existing pinned dependencies. Source archive identities and the adaptation/review map are retained in `CONTINUATION-ARTIFACTS.md`. A missing raw artifact is deliberate, not evidence that the repo reproduces the entire historical investigation.

@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "cases": 12,
+  "scope": "Native admitted constructor composed with native shared factory/once block/publication prefix, then native suspend on a separate stack before callback resumes. Each invocation starts from seeded eligible state. dispatch_once, ObjC/runtime, rest of init, property ownership and hierarchy effects remain modeled; attempted addSubview:nil is recorded without throwing. No asynchronous/runtime proof.",
+  "recordFormat": "partitioned-v1",
+  "parts": [
+    {
+      "path": "factory-attachment-tests/part-001.json",
+      "records": 8,
+      "sha256": "e5e941374208ea7d6b3ff1b5bea8f0260068634950dd088525404782ade06714"
+    },
+    {
+      "path": "factory-attachment-tests/part-002.json",
+      "records": 4,
+      "sha256": "d56a0ed6d06145705e9b3fb237af5a6737215c4f2eff231412e2ec038e969a0e"
+    }
+  ]
+}

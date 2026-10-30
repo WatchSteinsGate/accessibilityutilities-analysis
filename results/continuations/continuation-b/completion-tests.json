@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "cases": 60,
+  "scope": "Native completion-block copy/dispose/invoke helpers with manually prepared blocks. ARC counters, zeroing-weak resolutions and enqueueReusableBuffer: effect modeled. A live-to-nil weak sequence is forced, not proven reachable under real owner lifetime. Native buffer-cache insertion, GPU completion, actual Blocks runtime copying and concurrency not executed.",
+  "recordFormat": "partitioned-v1",
+  "parts": [
+    {
+      "path": "completion-tests/part-001.json",
+      "records": 30,
+      "sha256": "8b654811e697f6c08c624a6e746b909f607171053460599cf9b9591f30ef9bed"
+    },
+    {
+      "path": "completion-tests/part-002.json",
+      "records": 30,
+      "sha256": "0da62623aeed604b7efc7f2db6577249656833456b221ee6937a1be57b5a69f1"
+    }
+  ]
+}

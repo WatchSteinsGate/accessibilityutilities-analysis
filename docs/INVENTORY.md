@@ -1,15 +1,54 @@
 # Included file inventory
 
-All files are text; no proprietary binaries or archives are included. SHA256SUMS covers every included file except itself.
+All committed artifacts are expanded text; no proprietary binaries or opaque archives are included. `SHA256SUMS` covers every listed file except itself. New continuation scopes, record partitioning and provenance are indexed in [CONTINUATION-ARTIFACTS.md](CONTINUATION-ARTIFACTS.md).
 
 - `.gitignore`
 - `README.md`
+- `SHA256SUMS`
+- `docs/ATTACHMENT-FACTORY-COMPLETION.md`
+- `docs/CANCELLATION-RENDER-SHORTCUT.md`
+- `docs/CONTINUATION-ARTIFACTS.md`
+- `docs/CONTINUATION-REPRODUCTION.md`
 - `docs/HANDOFF.md`
 - `docs/INTEGRITY-AND-TRACE.md`
+- `docs/INVENTORY.md`
 - `docs/LIFECYCLE-CONTINUATION.md`
+- `docs/NEXT-STEPS.md`
 - `docs/OMISSIONS.md`
 - `docs/RESIZE-LAYOUT-CONTINUATION.md`
 - `requirements.txt`
+- `results/continuations/continuation-a/cancellation-tests.json`
+- `results/continuations/continuation-a/cleanup-tail-tests.json`
+- `results/continuations/continuation-a/lifecycle-queue-tests.json`
+- `results/continuations/continuation-a/render-tests.json`
+- `results/continuations/continuation-a/render-tests/part-001.json`
+- `results/continuations/continuation-a/render-tests/part-002.json`
+- `results/continuations/continuation-a/render-tests/part-003.json`
+- `results/continuations/continuation-a/render-tests/part-004.json`
+- `results/continuations/continuation-a/render-tests/part-005.json`
+- `results/continuations/continuation-a/shortcut-reference-candidates.json`
+- `results/continuations/continuation-a/summary.json`
+- `results/continuations/continuation-b/attachment-tests.json`
+- `results/continuations/continuation-b/attachment-tests/part-001.json`
+- `results/continuations/continuation-b/attachment-tests/part-002.json`
+- `results/continuations/continuation-b/attachment-tests/part-003.json`
+- `results/continuations/continuation-b/attachment-tests/part-004.json`
+- `results/continuations/continuation-b/attachment-tests/part-005.json`
+- `results/continuations/continuation-b/attachment-tests/part-006.json`
+- `results/continuations/continuation-b/attachment-tests/part-007.json`
+- `results/continuations/continuation-b/attachment-tests/part-008.json`
+- `results/continuations/continuation-b/attachment-tests/part-009.json`
+- `results/continuations/continuation-b/attachment-tests/part-010.json`
+- `results/continuations/continuation-b/cache-guard-tests.json`
+- `results/continuations/continuation-b/code-equality.json`
+- `results/continuations/continuation-b/completion-tests.json`
+- `results/continuations/continuation-b/completion-tests/part-001.json`
+- `results/continuations/continuation-b/completion-tests/part-002.json`
+- `results/continuations/continuation-b/factory-attachment-tests.json`
+- `results/continuations/continuation-b/factory-attachment-tests/part-001.json`
+- `results/continuations/continuation-b/factory-attachment-tests/part-002.json`
+- `results/continuations/continuation-b/factory-tests.json`
+- `results/continuations/continuation-b/summary.json`
 - `results/lifecycle/size-sync-tests.json`
 - `results/lifecycle/summary.json`
 - `results/lifecycle/view-lifecycle-tests.json`
@@ -23,6 +62,21 @@ All files are text; no proprietary binaries or archives are included. SHA256SUMS
 - `results/resize/geometry-tests.json`
 - `results/resize/reentry-tests.json`
 - `results/resize/summary.json`
+- `tests/continuation-a/emulator.py`
+- `tests/continuation-a/native.py`
+- `tests/continuation-a/static_audit.py`
+- `tests/continuation-a/test_cancellation.py`
+- `tests/continuation-a/test_cleanup_tails.py`
+- `tests/continuation-a/test_lifecycle_queue.py`
+- `tests/continuation-a/test_render.py`
+- `tests/continuation-b/emulator.py`
+- `tests/continuation-b/native.py`
+- `tests/continuation-b/static_audit.py`
+- `tests/continuation-b/test_attachment.py`
+- `tests/continuation-b/test_cache_guards.py`
+- `tests/continuation-b/test_completion.py`
+- `tests/continuation-b/test_factory.py`
+- `tests/continuation-b/test_factory_attachment.py`
 - `tests/macho.py`
 - `tests/native_env.py`
 - `tests/test_button_layout.py`
@@ -31,5 +85,4 @@ All files are text; no proprietary binaries or archives are included. SHA256SUMS
 - `tests/test_size_sync.py`
 - `tests/test_view_lifecycle.py`
 - `tests/ui-cache-schema.json`
-- `docs/INVENTORY.md`
-- `SHA256SUMS`
+- `tools/validate-continuation-results.py`

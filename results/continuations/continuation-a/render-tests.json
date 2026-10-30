@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "cases": 104,
+  "scope": "Native original/R03 frame control flow, normal cleanup, shortcut callback, wrappers and R03 late guard. Objective-C getters/effects, clock, ARC accounting, ImGui/Metal frame and encoding callees, context/data results and journal sink modeled. Faults synthetic. No real ARC/UIKit/Metal, GPU submission, physical gesture/touch timing, exceptions or races.",
+  "recordFormat": "partitioned-v1",
+  "parts": [
+    {
+      "path": "render-tests/part-001.json",
+      "records": 22,
+      "sha256": "c3599ee39bd6eed373f8ba086a51097c1cdbf9a29ee2647d1796c1067ee5789c"
+    },
+    {
+      "path": "render-tests/part-002.json",
+      "records": 18,
+      "sha256": "ac54d2c9d879c2c7535a760ae6a72f9da8b0042e43dca7f7fa52ffe33b532aed"
+    },
+    {
+      "path": "render-tests/part-003.json",
+      "records": 24,
+      "sha256": "5dd45c170b7a6256977abaef9ca0791e810ae5dd3a2bd622a3de033bb586997e"
+    },
+    {
+      "path": "render-tests/part-004.json",
+      "records": 19,
+      "sha256": "75033a6b008384cddcf333f92994781dd80f4ed016c65b0042b9f93fa3d7e724"
+    },
+    {
+      "path": "render-tests/part-005.json",
+      "records": 21,
+      "sha256": "8ae69fcd5800e3a6d94f3dba7ede16c63da3c923959ddef272a0e60c212ae29e"
+    }
+  ]
+}
