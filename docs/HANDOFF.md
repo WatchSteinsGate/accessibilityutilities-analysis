@@ -18,6 +18,8 @@ The user prefers concrete local tracing and verification over reassurance and do
 7. Cancellation/render/shortcut continuation added 232 scoped cases, extending into sequential cancellation, lifecycle queue drain, frame failures/recovery, immediate shortcut consumers and bounded cleanup tails.
 8. Attachment/factory/completion continuation added 210 cases, including post-admission attachment, native singleton reuse, completion capture helpers and cache-admission guards. Nine portable scripts were rerun successfully with pinned dependencies; the original five suites remain unchanged.
 
+9. Scheduling continuation adds 64 cases: native observer registration, notification routing and bounded constructor queue/block excerpts. Main-queue operands narrow the interleaving hypothesis; reachable reentry/off-main writers remain unresolved. See [scheduling report](reports/LIFECYCLE-SCHEDULING.md).
+
 ## Conclusions to carry forward
 
 - Lifecycle readiness depends on application state and notifications; do not equate it with a license/server success flag.
@@ -33,6 +35,8 @@ The user prefers concrete local tracing and verification over reassurance and do
 
 ## Latest findings
 
+- Lifecycle observers request the main operation queue; constructor and coalesced reevaluation blocks use the imported main dispatch queue. This supports ordinary serialization, not actual runtime delivery or proof against reentry. The latest 64-case suite passed; prior suites were not rerun in this pass.
+
 - Original queued callbacks reject a stale captured generation at admission. Already-admitted callbacks can still reach attachment after a staged native cancellation; runtime reachability of that interleaving is **not established**.
 - Native singleton reuse avoids repeated allocation in the tested once sequence but still performs geometry and drawing-reference updates. Reuse does not refresh the first initializer-published shortcut control pointer when later calls pass different symbolic pointers; actual changed inputs/dangling lifetime are not established.
 - Immediate shortcut-to-menu-draw consumption is traced. Repeated qualifying callbacks set the byte to 1, not a direct toggle. Pointee lifetime and other writers remain open.
@@ -42,7 +46,7 @@ The user prefers concrete local tracing and verification over reassurance and do
 
 ## Next work, in order
 
-1. **Reachable scheduling/reentry:** identify actual runtime routes that could interleave lifecycle changes after admission; preserve main-queue serialization constraints rather than assuming a race from staged mutation.
+1. **Reachable scheduling/reentry:** queue operands are now recovered. Trace synchronous constructor callees and remaining lifecycle wrapper/initializer caller contexts for a concrete reentry/off-main writer route; preserve normal main-queue serialization rather than assuming a race from staged mutation.
 2. **Control-pointer lifetime:** establish its actual producer/owner, caller invariants and other pointee writers. Do not infer a dangling pointer solely from singleton reuse.
 3. **Backend draw and completion composition:** extend native draw-loop/resource-failure analysis and completion registration/copy contracts. GPU delivery and command-buffer error outcomes remain unverified.
 4. **Accepted cache body:** trace insertion, enumeration, eviction and reuse under legitimate state. The entry-size guard is only a prefix.

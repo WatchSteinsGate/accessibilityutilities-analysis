@@ -36,3 +36,9 @@ These local session packages were reviewed as sources, **not uploaded as opaque 
 ## Indexed record parts
 
 Large `*-tests.json` files are `partitioned-v1` indexes. Each lists relative part paths, record counts and SHA-256 values; every original record is retained in the adjacent text JSON parts. Runnable tests still emit ordinary complete JSON into generated results. The checked-in validator verifies both formats. Partitioning addresses connector request limits without publishing opaque archives.
+
+## Scheduling pass
+
+The later scheduling continuation starts at `ba6c9ff8340be1a766996f06ea63caa2d48f9a03`. It adds `docs/reports/LIFECYCLE-SCHEDULING.md`, two scripts under `tests/continuation-c/`, and complete 64-case records plus bounded static metadata under `results/continuations/continuation-c/`. It reuses unchanged continuation-b helpers; no evidence ZIP or duplicate helper tree is required.
+
+The new suite and mapper ran with Python 3.13 / Capstone 5.0.7 / Unicorn 2.1.4. The prior 442 records were integrity-validated, not rerun. The indexed validator deliberately expands from 442 to 506 records. Across all groups there are 800 stored labeled cases, not 800 independent paths. Raw local disassembly and scratch reference maps remain excluded; retained metadata contains reviewed address roles, hashes and direct-edge provenance rather than instruction dumps. Changed-file checksums are verified locally; untouched remote manifest entries are retained in this partial checkout.

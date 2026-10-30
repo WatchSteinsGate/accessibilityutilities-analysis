@@ -26,3 +26,7 @@ The user's fuller Notion context and private retained local artifacts remain sep
 The two new reports, nine portable read-only test suites and their modeled-case records were reviewed and added in expanded text form. Original evidence ZIPs are **not** uploaded verbatim; benign scripts/results were selected and adapted. Raw proprietary disassembly, symbol dumps, full function indices, source binaries, historical download links, patch/build/install tooling and private session material remain excluded under the policy above.
 
 The new reports are repository editions: references to omitted local disassembly/ZIP packaging were corrected, reproduction uses `AU_ORIGINAL` / `AU_R03`, results use `AU_RESULTS`, and fresh portable reruns use the existing pinned dependencies. Source archive identities and the adaptation/review map are retained in `CONTINUATION-ARTIFACTS.md`. A missing raw artifact is deliberate, not evidence that the repo reproduces the entire historical investigation.
+
+## Scheduling continuation additions
+
+The scheduling report, two portable scripts, complete 64-case records and bounded static metadata are included. Local raw instruction windows, broad scratch reference files and unresolved-class debugging output are omitted; their role, corrected assumptions and limits are described in `reports/LIFECYCLE-SCHEDULING.md`. No proprietary binary, ZIP, backend/authentication implementation, secret or private download/session URI is added. The existing continuation-b helpers are reused unchanged.

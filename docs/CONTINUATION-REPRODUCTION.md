@@ -1,4 +1,4 @@
-# Reproduce the two new continuation groups
+# Reproduce the continuation groups
 
 Use Python 3 and the existing root `requirements.txt`: Capstone 5.0.7 and Unicorn 2.1.4. The original session runs used Capstone 5.0.9; all nine repository editions were freshly rerun against 5.0.7 and retained their expected case counts.
 
@@ -8,7 +8,7 @@ python -m venv .venv
 python -m pip install -r requirements.txt
 export AU_ORIGINAL="/absolute/path/to/authorized/original/AccessibilityUtilities"
 export AU_R03="/absolute/path/to/authorized/r03/AccessibilityUtilities"
-for group in continuation-a continuation-b; do
+for group in continuation-a continuation-b continuation-c; do
   for suite in tests/"$group"/test_*.py; do
     python "$suite" || exit 1
   done
@@ -32,3 +32,14 @@ Raw proprietary disassembly and binary evidence archives remain excluded. The re
 ## Indexed record parts
 
 Large `*-tests.json` files are `partitioned-v1` indexes. Each lists relative part paths, record counts and SHA-256 values; every original record is retained in the adjacent text JSON parts. Runnable tests still emit ordinary complete JSON into generated results. The checked-in validator verifies both formats. Partitioning addresses connector request limits without publishing opaque archives.
+
+## Scheduling continuation (64 records)
+
+`tests/continuation-c/test_scheduling.py` reuses the existing continuation-b native/parser/emulator modules without modifying them. It sets its own default output directory to `results/generated/continuation-c/`; an explicit `AU_RESULTS` overrides this. Use a distinct output directory for each group. Also run:
+
+```bash
+python tests/continuation-c/map_scheduling.py
+python tools/validate-continuation-results.py
+```
+
+The scheduling pass ran only its new 64-case suite and static mapper with Python 3.13 / Capstone 5.0.7 / Unicorn 2.1.4. It did not rerun the older suites. Its complete records and metadata are under `results/continuations/continuation-c/`. The validator now checks 506 indexed continuation records (442 earlier + 64 scheduling); this is record integrity, not a runtime rerun. Read [the report](reports/LIFECYCLE-SCHEDULING.md) for the explicitly skipped producer body, modeled transition boundary and unresolved runtime scheduling.

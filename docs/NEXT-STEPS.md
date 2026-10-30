@@ -13,11 +13,15 @@ Two new repository editions preserve the latest findings:
 
 All nine new repository-adapted suites passed a fresh rerun with the pinned dependencies. Existing lifecycle/resize reports and their five suites were preserved. Counts are model records, not independent end-to-end paths, and the scopes overlap.
 
+## Latest scheduling pass
+
+[Queue constraints and callback routing](reports/LIFECYCLE-SCHEDULING.md) adds 64 scoped cases. Recovered lifecycle registrations request `mainQueue`; constructor and coalesced reevaluation blocks use the imported main dispatch queue. Ordinary queued notification delivery does not establish post-admission interruption. Runtime reentry/off-main state writers remain unproven. Six selected ranges match; the separately recorded R03 resume-mutator range differs as expected. Earlier suites were not rerun.
+
 ## What is next
 
 | Priority | Remaining question | Evidence needed / completion boundary |
 | --- | --- | --- |
-| 1 | Can lifecycle changes actually occur between callback admission and attachment? | Recover runtime/reentrant routes and main-queue constraints; staged mutation alone is insufficient. |
+| 1 | Can lifecycle changes actually occur between callback admission and attachment? | Main-queue operands are now recovered. Next trace synchronous constructor callees, lifecycle wrapper/initializer caller contexts, and other state writers for concrete reentry/off-main routes. Staged mutation alone remains insufficient; do not assume ordinary queued callbacks interrupt the constructor. |
 | 2 | Who owns the shortcut control pointer and how long is its pointee valid? | Trace actual producer, callers, changes and remaining writers; establish lifetime rather than assuming changed-pointer inputs occur. |
 | 3 | What happens inside backend allocation/draw/completion registration failures? | Extend native draw-loop and resource contracts beyond modeled providers; distinguish block registration/copying from actual GPU callback delivery. |
 | 4 | How does the accepted reusable-buffer cache body behave? | Trace insertion, enumeration, eviction, synchronization and selection/reuse; entry guards are not the full policy. |
