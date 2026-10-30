@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "cases": 58,
+  "scope": "58 scoped native/model cases: startup enqueue (4), queued callback/once routing (4), lifecycle forwarding veneers (32), admitted constructor synchronous messages (12), scalar rectangle helper (6). Dispatch/once token completion, ObjC factories/hierarchy/geometry, ARC, lock/journal and secondary setup boundaries modeled. Observer initializer is recorded but not executed here; no actual scheduler, UIKit reentry, changed real control pointer, backend success or device timing.",
+  "recordFormat": "partitioned-v1",
+  "parts": [
+    {
+      "path": "reentry-boundary-tests/part-001.json",
+      "records": 21,
+      "sha256": "acf7a3c30855f59c247d62c21e504bf27f1e40aedc7876b4fdef52d0655ddd6d"
+    },
+    {
+      "path": "reentry-boundary-tests/part-002.json",
+      "records": 4,
+      "sha256": "363f15f75d7283df7823fcbd48b59c9adbba5c9491d32cbc7857e91e738f42f6"
+    },
+    {
+      "path": "reentry-boundary-tests/part-003.json",
+      "records": 24,
+      "sha256": "5b90dc5859b99791f98bb388fa6469c369b018f6b8ccd5223eaa4f27f849330b"
+    },
+    {
+      "path": "reentry-boundary-tests/part-004.json",
+      "records": 4,
+      "sha256": "429a7de2f4b6c2f97c382a0c2aa5d2f3f59cd741dc927c7072fab24019f9de95"
+    },
+    {
+      "path": "reentry-boundary-tests/part-005.json",
+      "records": 5,
+      "sha256": "fe27091cd3185bdd6eb479ca5ddee7a72c889323ab18e476ca70c294e3ef24a1"
+    }
+  ]
+}
