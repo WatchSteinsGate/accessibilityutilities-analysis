@@ -1,7 +1,7 @@
 from pathlib import Path
 import argparse, json, hashlib
 ROOT=Path(__file__).resolve().parents[1]
-EXPECTED={'continuation-a':232,'continuation-b':210,'continuation-c':64,'continuation-d':58,'continuation-e':54,'continuation-f':46,'continuation-g':34,'continuation-h':36}
+EXPECTED={'continuation-a':232,'continuation-b':210,'continuation-c':64,'continuation-d':58,'continuation-e':54,'continuation-f':46,'continuation-g':34,'continuation-h':36,'continuation-i':30}
 parser=argparse.ArgumentParser(description='Verify stored record integrity, not native execution.')
 parser.add_argument('--group',choices=sorted(EXPECTED),help='Validate one group in a partial checkout; default requires all groups.')
 args=parser.parse_args();groups=[args.group] if args.group else list(EXPECTED)
