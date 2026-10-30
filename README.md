@@ -23,7 +23,7 @@ Private, curated research handoff for a read-only integrity and overlay lifecycl
 
 ## What is verified locally
 
-The repository now retains five investigation groups:
+The repository now retains six investigation groups:
 
 | Group | Labeled scoped cases | Validation |
 | --- | ---: | --- |
@@ -31,9 +31,10 @@ The repository now retains five investigation groups:
 | Cancellation/render/shortcut continuation (4 scripts) | 232 | Fresh portable rerun passed |
 | Attachment/factory/completion continuation (5 scripts) | 210 | Fresh portable rerun passed |
 | Lifecycle scheduling continuation (1 test + static mapper) | 64 | Passed; rerun in startup pass |
-| Startup/reentry boundary continuation (1 test + static mapper) | 58 | New scoped run passed |
+| Startup/reentry boundary continuation (1 test + static mapper) | 58 | Passed in prior publication |
+| Factory/control-state continuation | 54 | New scoped run passed |
 
-The startup/reentry pass adds **58 records**, bringing the stored total to **858 labeled cases** (294 + 442 + 64 + 58), not unique end-to-end paths. The new 58-case suite and static mapper passed; the existing 64-case scheduling suite/mapper and 110-case attachment suite were rerun. Other suites were not rerun. The continuation validator now expects 564 records across groups a–d; only group d was integrity-validated in this partial-checkout pass. See the latest report for boundaries.
+The latest factory/control-state pass adds **54 records**, bringing the stored total to **912 labeled cases** (294 + 442 + 64 + 58 + 54), not unique end-to-end paths. The new 54-case suite passed; older native suites were not rerun in this pass. The continuation validator now expects 618 records across groups a–e; only group e was integrity-validated in this partial checkout. [Latest findings and limits](docs/reports/FACTORY-CONTROL-PROVENANCE.md).
 
 In the prior publication, the **nine scripts / 442 records** were rerun using the repository's pinned Capstone 5.0.7 and Unicorn 2.1.4. The then-resulting **736 stored labeled cases across those three groups** are not 736 unique or independent end-to-end paths. Counts include paired builds, synthetic inputs, repetitions, staged mutations and directly seeded cleanup states. Original session runs of the two new groups used Capstone 5.0.9; the portable rerun used 5.0.7.
 

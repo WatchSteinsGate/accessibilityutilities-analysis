@@ -20,6 +20,7 @@ Expanded reviewed text only; no proprietary binaries or opaque archives. `SHA256
 - `docs/REPORT-TEMPLATE.md`
 - `docs/RESIZE-LAYOUT-CONTINUATION.md`
 - `docs/WORKLOG.md`
+- `docs/reports/FACTORY-CONTROL-PROVENANCE.md`
 - `docs/reports/LIFECYCLE-SCHEDULING.md`
 - `docs/reports/STARTUP-REENTRY-BOUNDARIES.md`
 - `docs/source-reports/Resize-layout-continuation.md`
@@ -66,6 +67,7 @@ Expanded reviewed text only; no proprietary binaries or opaque archives. `SHA256
 - `results/continuations/continuation-d/reentry-boundary-tests/part-004.json`
 - `results/continuations/continuation-d/reentry-boundary-tests/part-005.json`
 - `results/continuations/continuation-d/summary.json`
+- `results/continuations/continuation-e/factory-tests.json`
 - `results/lifecycle/size-sync-tests.json`
 - `results/lifecycle/summary.json`
 - `results/lifecycle/view-lifecycle-tests.json`
@@ -99,6 +101,7 @@ Expanded reviewed text only; no proprietary binaries or opaque archives. `SHA256
 - `tests/continuation-c/test_scheduling.py`
 - `tests/continuation-d/map_reentry_boundaries.py`
 - `tests/continuation-d/test_reentry_boundaries.py`
+- `tests/continuation-e/test_factories.py`
 - `tests/macho.py`
 - `tests/native_env.py`
 - `tests/test_button_layout.py`
