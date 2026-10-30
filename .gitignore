@@ -1,0 +1,10 @@
+inputs/
+*.framework/
+*.ipa
+*.dylib
+*.zip
+.env
+.venv/
+__pycache__/
+*.pyc
+results/generated/
