@@ -1,8 +1,9 @@
 # Included file inventory
 
-All committed artifacts are expanded text; no proprietary binaries or opaque archives are included. `SHA256SUMS` covers every listed file except itself. New continuation scopes, record partitioning and provenance are indexed in [CONTINUATION-ARTIFACTS.md](CONTINUATION-ARTIFACTS.md).
+All committed artifacts are expanded text; no proprietary binaries or opaque archives are included. `SHA256SUMS` covers every listed file except itself. Standing agent reporting is defined in [../AGENTS.md](../AGENTS.md); continuation scope, partitioning and provenance are indexed in [CONTINUATION-ARTIFACTS.md](CONTINUATION-ARTIFACTS.md).
 
 - `.gitignore`
+- `AGENTS.md`
 - `README.md`
 - `SHA256SUMS`
 - `docs/ATTACHMENT-FACTORY-COMPLETION.md`
@@ -15,7 +16,9 @@ All committed artifacts are expanded text; no proprietary binaries or opaque arc
 - `docs/LIFECYCLE-CONTINUATION.md`
 - `docs/NEXT-STEPS.md`
 - `docs/OMISSIONS.md`
+- `docs/REPORT-TEMPLATE.md`
 - `docs/RESIZE-LAYOUT-CONTINUATION.md`
+- `docs/WORKLOG.md`
 - `requirements.txt`
 - `results/continuations/continuation-a/cancellation-tests.json`
 - `results/continuations/continuation-a/cleanup-tail-tests.json`

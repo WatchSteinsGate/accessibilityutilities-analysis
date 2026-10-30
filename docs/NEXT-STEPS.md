@@ -1,5 +1,7 @@
 # Current success-path tracing checkpoint
 
+For every agent: follow [AGENTS.md](../AGENTS.md), append [WORKLOG.md](WORKLOG.md), and publish reviewed reports and supporting files here rather than leaving the only record in chat.
+
 ## What changed
 
 The work is still recovering the **original success-path graph**, comparing original/R03 behavior and checking its cancellation, failure and recovery dependencies. It is not a patch-development or release milestone.

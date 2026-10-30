@@ -4,6 +4,8 @@ Private, curated research handoff for a read-only integrity and overlay lifecycl
 
 ## Start here
 
+**Agents: read [AGENTS.md](AGENTS.md) before working.** Report work and add reviewed supporting files directly to this repository; maintain the [agent worklog](docs/WORKLOG.md), reports, next steps and integrity manifests.
+
 - [What changed and what is next](docs/NEXT-STEPS.md): latest success-path tracing checkpoint.
 - [Cancellation, render cleanup and shortcut consumer](docs/CANCELLATION-RENDER-SHORTCUT.md): 232 additional scoped cases.
 - [Accepted attachment, singleton reuse and render completion](docs/ATTACHMENT-FACTORY-COMPLETION.md): 210 additional scoped cases.
