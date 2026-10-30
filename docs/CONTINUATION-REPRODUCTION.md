@@ -78,3 +78,7 @@ Run `python tests/continuation-h/test_overlay_config.py` and `python tools/valid
 ## Size/backend/attachment composition (30 records)
 
 Run `python tests/continuation-i/test_overlay_attachment.py`, then `python tools/validate-continuation-results.py --group continuation-i`, with authorized inputs. Default generated output `results/generated/continuation-i/`, overridden by `AU_RESULTS`. New 30/30 and prior 34/36-case regressions passed; historical regression records byte-identical. Other older native suites not rerun. Default validator now expects 764 labels; only group i integrity-validated this pass. [Conditional threading, pre-return stop and modeled providers](reports/OVERLAY-SIZE-ATTACHMENT-COMPOSITION.md).
+
+## Native normal return and Menu INI (31 records)
+
+Run `python tests/continuation-j/test_overlay_return_menu.py`, then `python tools/validate-continuation-results.py --group continuation-j`, with authorized inputs. Default output `results/generated/continuation-j/`, overridden by `AU_RESULTS`. New 31/31 passed; prior 30-case composition rerun byte-identical. Other older native suites not rerun. Default validator expects 795 labels; only group j artifact-integrity validated. [Existing R03 wrapper, modeled class/scheduler operations and Menu state prerequisites](reports/OVERLAY-NORMAL-RETURN-MENU-INI.md). Native normal return is not complete functional initialization or real GPU/device success.

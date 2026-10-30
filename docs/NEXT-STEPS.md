@@ -79,3 +79,9 @@ Next: actual size synchronization and parent/child checks through the late nontr
 [30 new cases](reports/OVERLAY-SIZE-ATTACHMENT-COMPOSITION.md) compose native size synchronization, backend wrappers and optional Float/Draw/Menu routing through the pre-return stop `0x6854a8`. Main-thread size writes occur before backend/attachment work; a forced off-main boundary defers size work until the captured native block is manually drained, without proving that startup can reach this route. Native Menu reference publication precedes device/cache/decode-false guards and still reaches modeled readIniConfig.
 
 Next: final return including nonnil R03 instrumentation, successful Menu texture work and nonnil INI apply, actual child callbacks and control-state ownership/writers. No full initializer return, real backend/device success or performance/race diagnosis. Prior 34/36 records rerun byte-identical.
+
+## Native normal return and Menu INI apply
+
+[31 new cases](reports/OVERLAY-NORMAL-RETURN-MENU-INI.md) now execute the tested native caller through normal return, including actual existing R03 wrapper/helper instructions. R03 attempts touch/bubble method additions and requests v58InstallBubble on the main thread; external runtime operations are modeled and the callback is not executed. Actual factory/once reuse returns the same receiver and retains the first control argument. Native Menu nonnil-INI application normalizes style/mask and skips repeated integer reads after its applied flag is set, under explicit readIniConfig/state inputs.
+
+Next: actual requested bubble callback, successful Menu texture work, actual child texture callbacks and control-state writers/lifetime. Real GUI/font/device-object work and scheduling/performance remain open. Prior 30-case composition rerun byte-identical; no real backend/device success or fix.

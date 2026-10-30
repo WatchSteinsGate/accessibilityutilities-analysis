@@ -23,7 +23,7 @@ Private, curated research handoff for a read-only integrity and overlay lifecycl
 
 ## What is verified locally
 
-The repository now retains ten investigation groups:
+The repository now retains eleven investigation groups:
 
 | Group | Labeled scoped cases | Validation |
 | --- | ---: | --- |
@@ -36,9 +36,10 @@ The repository now retains ten investigation groups:
 | Complete Draw/Menu initializer effects | 46 | Passed in prior publication |
 | Overlay resource guards / failed singleton reuse | 34 | Passed; byte-identical regression rerun |
 | Overlay configuration / font guards / backend wrappers | 36 | Passed; byte-identical regression rerun |
-| Overlay size / backend / attachment composition | 30 | New scoped run passed |
+| Overlay size / backend / attachment composition | 30 | Passed; byte-identical regression rerun |
+| Overlay normal return / R03 wrapper / Menu INI | 31 | New scoped run passed |
 
-The size/backend/attachment pass adds **30 records**, bringing the stored total to **1058 labeled cases** (294 earlier + 764 continuation), not unique end-to-end paths. The new 30-case suite and prior 34/36-case regressions passed with unchanged historical records; other older native suites were not rerun. The continuation validator expects 764 records across groups a–i; only group i was integrity-validated in this partial checkout. Native size/backend/optional attachment ordering now reaches the pre-return stop, with explicit runtime/provider boundaries. This is not a full successful initializer return or genuine GPU/backend success. [Latest findings and limits](docs/reports/OVERLAY-SIZE-ATTACHMENT-COMPOSITION.md).
+The native normal-return/Menu-INI pass adds **31 records**, bringing the stored total to **1089 labeled cases** (294 earlier + 795 continuation), not unique end-to-end paths. The new 31-case suite and prior 30-case composition regression passed with unchanged historical records; older native suites were not rerun. The continuation validator expects 795 records across groups a–j; only group j was integrity-validated in this partial checkout. Tested native caller paths now reach normal return, including existing R03 wrapper/helpers, with explicit runtime/providers. Menu nonnil-INI state application is covered under modeled integer reads. This is not complete functional initialization or genuine GPU/backend success. [Latest findings and limits](docs/reports/OVERLAY-NORMAL-RETURN-MENU-INI.md).
 
 In the prior publication, the **nine scripts / 442 records** were rerun using the repository's pinned Capstone 5.0.7 and Unicorn 2.1.4. The then-resulting **736 stored labeled cases across those three groups** are not 736 unique or independent end-to-end paths. Counts include paired builds, synthetic inputs, repetitions, staged mutations and directly seeded cleanup states. Original session runs of the two new groups used Capstone 5.0.9; the portable rerun used 5.0.7.
 
