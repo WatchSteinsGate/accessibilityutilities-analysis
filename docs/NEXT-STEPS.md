@@ -93,3 +93,11 @@ Next: actual requested bubble callback, successful Menu texture work, actual chi
 ## Original sources available
 
 The actual nine ZIPs and two text documents are uploaded unchanged as repository release assets, with direct downloads in [the dated archive index](../archives/2026-10-31/README.md). This corrects the earlier summaries-only response; it is not new tracing, a diagnostic build or device validation. Keep retained source data separate from the current executable research workflow.
+
+## Bubble callback composition — 2026-10-31 (current checkpoint)
+
+[22 new cases](reports/BUBBLE-CALLBACK-COMPOSITION.md) compose native normal-return registration from cold UI caches with manually delivered existing R03 install/tap/pan callbacks. Install main-thread/allocation gates and native target/gesture wiring are executed under explicit UI providers. The actual tap writer XORs bit 0 through the first published Overlay control pointer; a composed native singleton sequence retains that first pointer despite later synthetic changed arguments. This identifies a concrete writer, not an actual dangling lifetime. Accepted pan callbacks reset translation even when small geometry skips position update.
+
+All 23 native/model suites were freshly rerun: 1111 generated labels (1089 prior + 22 new), prior record values unchanged. The full 817-record continuation integrity validator and complete-checkout checksums were checked; no real runtime/GPU/device/performance proof.
+
+**Next concrete priority:** successful Menu decode/upload and actual Float/Draw texture callbacks. In parallel in the roadmap, keep tracing control allocation deallocation/replacement and remaining pointee writers. The requested install callback is no longer wholly unexecuted, but delivery, UIKit behavior and timing remain modeled. The historical ordered lists above are previous checkpoints, not superseding this entry.
