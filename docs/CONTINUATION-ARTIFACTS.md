@@ -1,5 +1,12 @@
 # Continuation artifact provenance and organization
 
+## Publication checkpoint — explicitly authorized 2026-10-31
+
+The user explicitly requested “report to github now” after the local audit. This publication includes the original-success/minimality report and its reviewed supporting code, ledgers and records, including previously local continuations l–n required for reproduction. The local-pass statements below describe the earlier execution history, not this publication's status. No new binary, diagnostic build or source-archive modification is included. Future GitHub work still requires a new explicit user request.
+
+Current result: two bounded original-behavior differences; original genuine producer/processing and patch necessity remain unresolved. Full local validation: 34 suites /1605 labels, previous 1565 values equal. Expected-difference assertions are not preservation or minimality proof.
+
+
 ## Local source-package identities
 
 These local session packages were reviewed as sources, **not uploaded as opaque archives**. No binary download link or session attachment URI is included.
@@ -57,3 +64,19 @@ The new startup/reentry pass contributes 58 cases and ten equal code/data ranges
 - Findings: [callback composition](reports/BUBBLE-CALLBACK-COMPOSITION.md). The prior preinitialized-cache button-layout coverage is preserved; new cases compose native cold-cache registration with manual callback delivery and native action bodies.
 - All 23 suites/1111 labels passed; all prior 1089 record values match retained records. Full 817-record continuation integrity, inventory and complete-checkout hashes checked. Earlier outputs retain their original historical meaning.
 - Authorized release archives supplied the exact two read-only binary members after public download became possible; no historical tool or installer executed. Raw disassembly/input bytes, local scratch logs and private absolute input paths are not new Git-tree artifacts. No runtime installation/device/performance result.
+
+## Unpublished local continuation-l
+
+[Five-area report](reports/LOCAL-FIVE-AREA-CONTINUATION.md), six reviewed Python files in `tests/continuation-l/` (five suites and a static mapper), and complete results in `results/continuations/continuation-l/`. New 218 labels, full 28-suite / 1329-label regression, all prior 1111 records equal. `provenance.json`, `regression-summary.json`, `state-and-root-map.json` and `validation.json` distinguish model/native/static/metadata evidence. Original input binaries, archive sources and raw instruction scratch remain excluded. This is a separate local working copy; no GitHub request or publication occurred.
+
+## Unpublished local continuation-m
+
+[Writer/nonempty-render report](reports/CONTROL-WRITERS-NONEMPTY-RENDER.md), five reviewed Python files in `tests/continuation-m/` and complete structured results/map/provenance/regression/validation in `results/continuations/continuation-m/`. 236 further labels; all 32 suites / 1565 labels passed, prior 1329 record values equal. R03 Float draw entry RET is a tested expected discrepancy. Native state setup and pipeline-cache callers replace previous provider boundaries, while actual GUI/Metal/shader creation and runtime delivery remain explicit providers/unexecuted. The prior local snapshot is preserved; no GitHub action or publication occurred.
+
+## Local original-success/minimality audit — continuation-n
+
+[Report](reports/ORIGINAL-SUCCESS-PATH-AND-MINIMALITY.md); reviewed scanner in `tools/audit-success-path-delta.py`; two tests in `tests/continuation-n/`; 40 complete records and validation/provenance in `results/continuations/continuation-n/`. Structural ledger, 63-row necessity ledger and 16-node evidence graph are in `results/success-path-audit/`. Semantic obligations are reviewed evidence indexes, not auto-proved reachability. Full 34-suite / 1605-label rerun preserves 1565 historical records. Inputs and ZIPs stay unchanged and outside this curated tree; no archive builder executed, no GitHub action. The seven fills are not the whole original→R03 delta; V58 is the declared incremental baseline.
+
+### Publication transport correction
+
+The initial all-files MCP upload was rejected before publication by the 65,536-byte confirmation limit. Large static `state-and-root-map.json` is now a `static-map-parts-v1` index with one adjacent lossless JSON part per build; every original field is preserved. `python tools/validate-static-map-parts.py` checks part hashes and reconstructed canonical whole-object SHA256. This is a representation change only, not new native evidence. Supporting files are uploaded on a review branch and intended for a single squash merge. Other changed JSON may be compactly formatted without changing values. Native tests were not rerun for this publication-only formatting change.
