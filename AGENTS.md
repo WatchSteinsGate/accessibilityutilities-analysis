@@ -1,5 +1,10 @@
 # Instructions for every agent working in this repository
 
+## Current original-source retention exception
+
+The user explicitly clarified that the original ZIP files themselves must be uploaded. Those eleven unchanged originals are now repository release assets, indexed in `archives/2026-10-31/README.md`. Earlier curated-text-only omission statements below describe the research code tree and prior publication, not current absence of these source assets from GitHub. Keep original sources distinct from curated tests/reports; archive retention does not authorize executing or modifying its contents, making a release build, or changing the research safety/evidence boundaries. Do not substitute a summary for an explicitly requested original-file upload.
+
+
 These instructions apply to research, code, tests, documentation, artifact uploads and handoffs anywhere in this repository. **Report meaningful work directly in the repository, not only in a chat.** This file defines a standing workflow; it is not an automatic synchronization service or proof that an external agent has read it.
 
 ## 1. Read before doing work

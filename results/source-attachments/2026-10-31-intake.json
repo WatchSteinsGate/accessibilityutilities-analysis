@@ -14,11 +14,11 @@
   "retained_derivatives": [
     {
       "path": "docs/source-reports/SESSION-CONTEXT-THROUGH-R03-REVIEWED.md",
-      "sha256": "cd319815bd35bf91f3515e89252ea08edb4bbe86d5f4018deb43782751457665"
+      "sha256": "c4211a1f5295af7f3c499516ef82c0ea326e00e39bb8149be6a588413da41ad4"
     },
     {
       "path": "docs/source-reports/TIMING-DIAGNOSTICS-PROVENANCE.md",
-      "sha256": "57bd2a219d6d83a34f6b6116aae2d14941db3c05af3b989a11b4de0d23cd3f18"
+      "sha256": "81f53d3c6ab8c1e2b5c2bc671c3cd009c9281da81903bf6f8dd71d8006c4bd08"
     }
   ],
   "attachments": [
@@ -179,5 +179,6 @@
       "previous_manifest": "results/source-attachments/2026-10-30-intake.json",
       "disposition": "Hash-identical to the previous intake; existing curated derivatives retained without duplicate uploads. Source archive/binary, raw disassembly and patch/build/apply material remain omitted; no package code executed in this intake."
     }
-  ]
+  ],
+  "retained_derivative_note": "Narrative editions now link to the subsequent original-file release assets; source identities and initial review dispositions remain historical."
 }

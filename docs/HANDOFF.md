@@ -93,3 +93,7 @@ See [focused report](reports/FACTORY-CONTROL-PROVENANCE.md): 54 new passing scop
 ## Reattached sources and historical context — 2026-10-31
 
 [Attachment intake](ATTACHMENT-INTAKE.md) now records this batch's 11 occurrences / 10 identities: eight reattachments match the previous seven source identities, while T01, T02 and the session-context TXT are new to the intake manifest. A [reviewed historical narrative](source-reports/SESSION-CONTEXT-THROUGH-R03-REVIEWED.md) and [diagnostic provenance review](source-reports/TIMING-DIAGNOSTICS-PROVENANCE.md) preserve safe context without publishing the raw export, proprietary binaries or patch/build/apply material. The historical source's candidate/capture instructions do not supersede the later tracing checkpoint. No package/native code was executed, no new cases added and no device/performance outcome established. Original/R03 test identities and technical next steps remain unchanged.
+
+## Original-file delivery correction — 2026-10-31
+
+The user clarified that the ZIPs themselves were the primary requested deliverable. All eleven original attachments are now uploaded unchanged as [repository release assets](../archives/2026-10-31/README.md), separate from curated Git-tree research. The archive index provides direct original-file downloads and SHA-256 records. Earlier omission statements describe the initial summaries-only stage. No source code was executed, no new native/model cases were added, and technical research priorities are unchanged.

@@ -1,11 +1,13 @@
 # Included file inventory
 
-Expanded reviewed text only; no proprietary binaries or opaque archives. `SHA256SUMS` covers every listed file except itself. See [attachment intake](ATTACHMENT-INTAKE.md) and [artifact provenance](CONTINUATION-ARTIFACTS.md).
+The curated Git-tree investigation and archive index files are listed here. The eleven original attachments are downloadable release assets, indexed under `archives/2026-10-31/`, not binary files in the Git code tree. `SHA256SUMS` covers every listed file except itself. See [attachment intake](ATTACHMENT-INTAKE.md) and [artifact provenance](CONTINUATION-ARTIFACTS.md).
 
 - `.gitignore`
 - `AGENTS.md`
 - `README.md`
 - `SHA256SUMS`
+- `archives/2026-10-31/README.md`
+- `archives/2026-10-31/SHA256SUMS`
 - `docs/ATTACHMENT-FACTORY-COMPLETION.md`
 - `docs/ATTACHMENT-INTAKE.md`
 - `docs/CANCELLATION-RENDER-SHORTCUT.md`
@@ -95,6 +97,7 @@ Expanded reviewed text only; no proprietary binaries or opaque archives. `SHA256
 - `results/resize/summary.json`
 - `results/source-attachments/2026-10-30-intake.json`
 - `results/source-attachments/2026-10-31-intake.json`
+- `results/source-attachments/2026-10-31-original-files.json`
 - `tests/continuation-a/emulator.py`
 - `tests/continuation-a/native.py`
 - `tests/continuation-a/static_audit.py`
@@ -130,3 +133,4 @@ Expanded reviewed text only; no proprietary binaries or opaque archives. `SHA256
 - `tests/ui-cache-schema.json`
 - `tools/validate-attachment-intake.py`
 - `tools/validate-continuation-results.py`
+- `tools/validate-original-attachments.py`
