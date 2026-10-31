@@ -1,5 +1,33 @@
 # Continuation handoff
 
+## Publication checkpoint — explicitly authorized 2026-10-31
+
+The user explicitly requested “report to github now” after the local audit. This publication includes the original-success/minimality report and its reviewed supporting code, ledgers and records, including previously local continuations l–n required for reproduction. The local-pass statements below describe the earlier execution history, not this publication's status. No new binary, diagnostic build or source-archive modification is included. Future GitHub work still requires a new explicit user request.
+
+Current result: two bounded original-behavior differences; original genuine producer/processing and patch necessity remain unresolved. Full local validation: 34 suites /1605 labels, previous 1565 values equal. Expected-difference assertions are not preservation or minimality proof.
+
+
+## Current objective — original success and minimality (local, unpublished)
+
+The user explicitly redirected work away from FPS/crashes: recover the **original success path**, then establish whether the patches are the **smallest justified set preserving intended functionality**. [Current report](reports/ORIGINAL-SUCCESS-PATH-AND-MINIMALITY.md) and [complete 63-range ledger](../results/success-path-audit/PATCH-NECESSITY-LEDGER.md). Two bounded native witnesses show original Float→same-frame Menu behavior omitted in R03 and original self-hit pass-through changed. Neither is silently accepted as an intended exception. The original genuine producer/processing path remains open; no minimality/no-breakage certification is claimed.
+
+Full rerun: **34 suites / 1605 labels**, all previous 1565 record values equal, 40 new original-contract records. Passing expected differences is not preservation. The R03 incremental manifest targets V58, not the supplied original. No GitHub action or binary modification. Older FPS/crash-oriented paragraphs below are historical, not the current work queue.
+
+
+## Latest local follow-up — control writers and nonempty render
+
+[New report](reports/CONTROL-WRITERS-NONEMPTY-RENDER.md): **236 further scoped labels; all 32 suites / 1565 labels passed**, with all previous 1329 records equal. Supplied R03 `drawFloatWindow` returns immediately at entry; the original native draw writer executes only under admitted modeled GUI input. A residual static writer inside that R03 method is not normal-entry execution evidence. Actual Float reset and Overlay shortcut writers, nonempty native commands, native render-state matrix/bindings and pipeline-cache composition are now covered.
+
+Still open: actual owner alias/free/replacement, GUI/runtime reachability and synchronous reentry, decoder/shader creation, actual ARC/Metal/threads/completion and device timing. No FPS fix, modified input or GitHub action. The previous five-area pass remains a preserved historical local snapshot.
+
+
+## Latest local-only continuation — 2026-10-31
+
+[Five-area report](reports/LOCAL-FIVE-AREA-CONTINUATION.md): **218 new scoped records; all 28 suites / 1329 total labels passed**, with all prior 1111 retained records equal. Textures, control/destructor boundaries, full accepted cache policy, render/completion composition, and secondary timer/thread flags were advanced. This is a separate **unpublished local snapshot**, not a new GitHub revision. No GitHub action is permitted without a new explicit user request.
+
+Remaining: actual allocation lifetime/aliased writers; positive reachable reentry rather than staged mutation; actual decoder/pipeline/draw/GPU/ARC/thread delivery; genuine indirect backend success. All five areas were investigated, not falsely closed. No device-performance fix or modified binary. Existing capture/read-only inputs only; no new diagnostic build.
+
+
 ## Goal and constraints
 
 Investigate the original general startup-to-presentation path beyond the UI-only trace, compare supplied original and R03, and retain enough evidence and context for continuation. The user reports overlay/menu FPS and touch response degrade even when game FPS remains high; degradation can persist with the menu closed. Gyro was historically reported smooth. These are user reports, not measurements established by these tests.

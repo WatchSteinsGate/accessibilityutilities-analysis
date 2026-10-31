@@ -90,3 +90,30 @@ Run `python tests/continuation-k/test_bubble_callbacks.py` with authorized input
 `python tools/run-native-regression.py` runs all 23 native/model suites with per-group output under `results/generated/regression/`, overridden by `AU_REGRESSION_RESULTS`, and writes `summary.json`. It compares generated record values to retained complete/partitioned records (key-order normalization, preserving synthetic NaN/Infinity spelling); it does not overwrite historical files. Python 3.13.15, Capstone 5.0.7, Unicorn 2.1.4: all 1111 labels passed; the 1089 prior record values matched. New 22-case output was deterministic on repeated runs. [Reviewed summary](../results/continuations/continuation-k/regression-summary.json).
 
 `python tools/validate-continuation-results.py` now checks 817 retained continuation labels across a–k; `--group continuation-k` checks only the new 22. The full checkout and full 817-record validation were checked this pass, unlike previous partial-checkout checkpoints. Both existing static mappers also passed. Native/model execution is still not actual UIKit/main-queue/GPU/device execution or a performance fix.
+
+## Local five-area continuation-l — 218 records, unpublished
+
+Read [scope and findings](reports/LOCAL-FIVE-AREA-CONTINUATION.md). With authorized input variables and pinned dependencies configured:
+
+```bash
+for suite in tests/continuation-l/test_*.py; do python "$suite" || exit 1; done
+python tests/continuation-l/map_state_and_roots.py
+python tools/run-native-regression.py
+python tools/validate-continuation-results.py
+```
+
+Five suites produce 48 texture, 40 cache-policy, 28 backend/completion, 72 state-route/destructor and 30 thread-flag records. Standalone suites use separate generated directories; the full runner writes unique filenames in its continuation-l group. Retained local records and metadata are under `results/continuations/continuation-l/`. Full regression actually reran all 28 suites / 1329 labels, including prior 1111 equal records; earlier paragraphs retain historical validation scope rather than describing this pass. Expanded default artifact validator requires 1035 continuation labels across a–l, plus 294 separately retained base labels. No real threads, worker body, genuine backend transitions, iOS or GPU execute.
+
+## Local control-writer/render continuation-m — 236 records, unpublished
+
+With authorized input environment variables and pinned dependencies, run the four `tests/continuation-m/test_*.py` scripts and `python tests/continuation-m/map_control_pointee.py`, then `python tools/run-native-regression.py` and `python tools/validate-continuation-results.py`. Outputs use unique result filenames under the runner's continuation-m directory. Native/model records are 156 writer + 32 nonempty command + 24 native render-state + 24 pipeline-cache cases. Complete retained records and metadata: `results/continuations/continuation-m/`.
+
+Actual full rerun: 32 suites / 1565 labels; all previous 1329 retained records equal. Expanded artifact validator requires 1271 continuation labels across a–m, separate from 294 base labels. R03 Float draw's immediate RET is an asserted expected discrepancy, not original-equivalent success. Read [findings, providers and reproduction](reports/CONTROL-WRITERS-NONEMPTY-RENDER.md). Old static root/scheduling maps were preserved, not rerun this follow-up; the new pointee mapper was run. No GitHub work, new diagnostic build, real iOS/GPU/worker execution or performance result.
+
+## Original-success/minimality continuation-n — 40 records, unpublished
+
+[Current report](reports/ORIGINAL-SUCCESS-PATH-AND-MINIMALITY.md) contains complete commands. Run the two `tests/continuation-n/test_*.py` suites with authorized input variables; run `tools/audit-success-path-delta.py --r03-archive "$AU_R03_ARCHIVE"` for read-only complete-delta accounting. The scanner verifies the archive hash and reads only JSON, never archive builders. Full runner: 34 suites / 1605 labels; prior 1565 records equal. Expanded continuation validator: 1311 labels across a–n, plus 294 base labels. New 16 frame/Float and 24 input records include expected original-versus-R03 differences, not preservation passes. No original end-to-end or minimality certification. Retained ledgers are under `results/success-path-audit/`.
+
+### Publication transport correction
+
+The initial all-files MCP upload was rejected before publication by the 65,536-byte confirmation limit. Large static `state-and-root-map.json` is now a `static-map-parts-v1` index with one adjacent lossless JSON part per build; every original field is preserved. `python tools/validate-static-map-parts.py` checks part hashes and reconstructed canonical whole-object SHA256. This is a representation change only, not new native evidence. Supporting files are uploaded on a review branch and intended for a single squash merge. Other changed JSON may be compactly formatted without changing values. Native tests were not rerun for this publication-only formatting change.

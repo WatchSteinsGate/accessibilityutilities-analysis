@@ -1,5 +1,21 @@
 # Instructions for every agent working in this repository
 
+## Publication checkpoint — explicitly authorized 2026-10-31
+
+The user explicitly requested “report to github now” after the local audit. This publication includes the original-success/minimality report and its reviewed supporting code, ledgers and records, including previously local continuations l–n required for reproduction. The local-pass statements below describe the earlier execution history, not this publication's status. No new binary, diagnostic build or source-archive modification is included. Future GitHub work still requires a new explicit user request.
+
+Current result: two bounded original-behavior differences; original genuine producer/processing and patch necessity remain unresolved. Full local validation: 34 suites /1605 labels, previous 1565 values equal. Expected-difference assertions are not preservation or minimality proof.
+
+
+## Latest scope correction — original success and patch necessity
+
+Do not continue FPS/crash diagnosis as the current objective. Recover original success contracts and audit the minimum justified changes preserving intended functionality. See [current report](docs/reports/ORIGINAL-SUCCESS-PATH-AND-MINIMALITY.md), all 63 changed-range obligations, and continuation-n's two expected preservation discrepancies. Original genuine readiness/processing remains open; successful seeded frames or expected-difference assertions are not whole-path or minimality proof. Continuations l–n remain local/unpublished. Do not act on GitHub without a new explicit user request.
+
+
+## Latest user permission boundary — local-only continuation
+
+The user explicitly requires GitHub work only when they say so. Do not read/fetch, commit, push, branch, open/merge PRs, or publish on GitHub without a new explicit request. The later “do all” request authorized local investigation of five remaining areas, not overriding this rule. Continuations l and m are local and unpublished; retain evidence here and hand off a local archive. This overrides any standing publication wording below.
+
 ## Current original-source retention exception
 
 The user explicitly clarified that the original ZIP files themselves must be uploaded. Those eleven unchanged originals are now repository release assets, indexed in `archives/2026-10-31/README.md`. Earlier curated-text-only omission statements below describe the research code tree and prior publication, not current absence of these source assets from GitHub. Keep original sources distinct from curated tests/reports; archive retention does not authorize executing or modifying its contents, making a release build, or changing the research safety/evidence boundaries. Do not substitute a summary for an explicitly requested original-file upload.

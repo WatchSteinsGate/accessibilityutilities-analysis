@@ -52,3 +52,15 @@ T01/T02 include proprietary diagnostic frameworks, binary deltas, build/apply sc
 ## Bubble callback composition — 2026-10-31
 
 New permitted artifacts are the reviewed read-only native/model callback suite, full 22-case records and bounded code-window hashes, portable regression runner/summary and focused report. Raw local disassembly and scratch logs are omitted as noncanonical analysis; extracted input binaries and original archives are already identified release sources, not new Git-tree files. No patch/hook builder, modified binary, installer or actual runtime method installation was created. The user made the repository public before download; earlier private-visibility statements above describe the historical intake stage, not a claim about current visibility. Public hosting does not authenticate sources or establish third-party rights.
+
+## Local-only five-area continuation
+
+Continuation-l was produced in a separate local working copy under the user's explicit GitHub permission restriction. Its report, six scripts, five complete record files, static map, regression/provenance/validation metadata and documentation updates are included locally. No claim is made that any new file is on GitHub. Previously retained historical release URLs are unchanged and were not fetched. Read-only input binaries, source ZIPs, raw proprietary disassembly scratch, bytecode caches and unreviewed local logs are excluded from the new curated archive. It contains no installable binary, patch or bypass implementation.
+
+## Local continuation-m retention
+
+The separate follow-up includes four new test suites, one bounded pointee mapper, their complete reviewed records/metadata and report/navigation/integrity updates. R03 entry-return metadata is retained instead of exporting raw modified/dead instruction ranges. No input binary, archive source, full disassembly, bytecode or unreviewed scratch log is included. This pass remains local and unpublished under the user's GitHub restriction.
+
+## Original-success/minimality audit retention
+
+Continuation-n retains reviewed code, complete records, the structural/semantic ledgers and report, not raw disassembly, input executables, patch bytes, temporary harness output or archive builders. V58's declared baseline executable is unavailable locally and was not fetched. Actual device/runtime evidence and full genuine producer/Draw-processing success are not present; the graph labels these OPEN rather than inventing them. No GitHub action, executable variant or diagnostic build accompanied this pass.

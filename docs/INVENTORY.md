@@ -1,7 +1,13 @@
 # Included file inventory
 
-The curated Git-tree investigation and archive index files are listed here. The eleven original attachments are downloadable release assets, indexed under `archives/2026-10-31/`, not binary files in the Git code tree. `SHA256SUMS` covers every listed file except itself. See [attachment intake](ATTACHMENT-INTAKE.md) and [artifact provenance](CONTINUATION-ARTIFACTS.md).
+## Publication checkpoint — explicitly authorized 2026-10-31
 
+The user explicitly requested “report to github now” after the local audit. This publication includes the original-success/minimality report and its reviewed supporting code, ledgers and records, including previously local continuations l–n required for reproduction. The local-pass statements below describe the earlier execution history, not this publication's status. No new binary, diagnostic build or source-archive modification is included. Future GitHub work still requires a new explicit user request.
+
+Current result: two bounded original-behavior differences; original genuine producer/processing and patch necessity remain unresolved. Full local validation: 34 suites /1605 labels, previous 1565 values equal. Expected-difference assertions are not preservation or minimality proof.
+
+
+Complete curated **local snapshot**, including unpublished continuations l–n. Current objective: original success and patch necessity/minimality, not FPS/crashes. Original releases remain separate from this text-only tree; no GitHub action occurred. `SHA256SUMS` covers every listed file except itself. Inputs, raw disassembly, generated scratch and bytecode are excluded. See [provenance](CONTINUATION-ARTIFACTS.md) and [current report](reports/ORIGINAL-SUCCESS-PATH-AND-MINIMALITY.md).
 
 - `.gitignore`
 - `AGENTS.md`
@@ -24,9 +30,12 @@ The curated Git-tree investigation and archive index files are listed here. The 
 - `docs/RESIZE-LAYOUT-CONTINUATION.md`
 - `docs/WORKLOG.md`
 - `docs/reports/BUBBLE-CALLBACK-COMPOSITION.md`
+- `docs/reports/CONTROL-WRITERS-NONEMPTY-RENDER.md`
 - `docs/reports/FACTORY-CONTROL-PROVENANCE.md`
 - `docs/reports/INITIALIZER-EFFECTS.md`
 - `docs/reports/LIFECYCLE-SCHEDULING.md`
+- `docs/reports/LOCAL-FIVE-AREA-CONTINUATION.md`
+- `docs/reports/ORIGINAL-SUCCESS-PATH-AND-MINIMALITY.md`
 - `docs/reports/OVERLAY-CONFIG-FONTS-BACKEND.md`
 - `docs/reports/OVERLAY-NORMAL-RETURN-MENU-INI.md`
 - `docs/reports/OVERLAY-RESOURCE-GUARDS.md`
@@ -86,6 +95,30 @@ The curated Git-tree investigation and archive index files are listed here. The 
 - `results/continuations/continuation-j/overlay-return-menu-tests.json`
 - `results/continuations/continuation-k/bubble-callback-tests.json`
 - `results/continuations/continuation-k/regression-summary.json`
+- `results/continuations/continuation-l/backend-completion-tests.json`
+- `results/continuations/continuation-l/cache-policy-tests.json`
+- `results/continuations/continuation-l/provenance.json`
+- `results/continuations/continuation-l/regression-summary.json`
+- `results/continuations/continuation-l/state-and-root-map-original.json`
+- `results/continuations/continuation-l/state-and-root-map-r03.json`
+- `results/continuations/continuation-l/state-and-root-map.json`
+- `results/continuations/continuation-l/state-route-tests.json`
+- `results/continuations/continuation-l/texture-tests.json`
+- `results/continuations/continuation-l/thread-flag-tests.json`
+- `results/continuations/continuation-l/validation.json`
+- `results/continuations/continuation-m/control-pointee-map.json`
+- `results/continuations/continuation-m/control-writer-tests.json`
+- `results/continuations/continuation-m/pipeline-cache-tests.json`
+- `results/continuations/continuation-m/provenance.json`
+- `results/continuations/continuation-m/regression-summary.json`
+- `results/continuations/continuation-m/render-command-tests.json`
+- `results/continuations/continuation-m/render-state-tests.json`
+- `results/continuations/continuation-m/validation.json`
+- `results/continuations/continuation-n/original-input-contract-tests.json`
+- `results/continuations/continuation-n/original-success-contract-tests.json`
+- `results/continuations/continuation-n/provenance.json`
+- `results/continuations/continuation-n/regression-summary.json`
+- `results/continuations/continuation-n/validation.json`
 - `results/lifecycle/size-sync-tests.json`
 - `results/lifecycle/summary.json`
 - `results/lifecycle/view-lifecycle-tests.json`
@@ -102,6 +135,10 @@ The curated Git-tree investigation and archive index files are listed here. The 
 - `results/source-attachments/2026-10-30-intake.json`
 - `results/source-attachments/2026-10-31-intake.json`
 - `results/source-attachments/2026-10-31-original-files.json`
+- `results/success-path-audit/PATCH-NECESSITY-LEDGER.md`
+- `results/success-path-audit/original-r03-delta-ledger.json`
+- `results/success-path-audit/original-success-obligations.json`
+- `results/success-path-audit/patch-necessity-ledger.json`
 - `tests/continuation-a/emulator.py`
 - `tests/continuation-a/native.py`
 - `tests/continuation-a/static_audit.py`
@@ -128,6 +165,19 @@ The curated Git-tree investigation and archive index files are listed here. The 
 - `tests/continuation-i/test_overlay_attachment.py`
 - `tests/continuation-j/test_overlay_return_menu.py`
 - `tests/continuation-k/test_bubble_callbacks.py`
+- `tests/continuation-l/map_state_and_roots.py`
+- `tests/continuation-l/test_backend_completion.py`
+- `tests/continuation-l/test_cache_policy.py`
+- `tests/continuation-l/test_state_routes.py`
+- `tests/continuation-l/test_textures.py`
+- `tests/continuation-l/test_thread_flags.py`
+- `tests/continuation-m/map_control_pointee.py`
+- `tests/continuation-m/test_control_writers.py`
+- `tests/continuation-m/test_pipeline_cache.py`
+- `tests/continuation-m/test_render_commands.py`
+- `tests/continuation-m/test_render_state.py`
+- `tests/continuation-n/test_original_input_contract.py`
+- `tests/continuation-n/test_original_success_contract.py`
 - `tests/macho.py`
 - `tests/native_env.py`
 - `tests/test_button_layout.py`
@@ -136,7 +186,9 @@ The curated Git-tree investigation and archive index files are listed here. The 
 - `tests/test_size_sync.py`
 - `tests/test_view_lifecycle.py`
 - `tests/ui-cache-schema.json`
+- `tools/audit-success-path-delta.py`
 - `tools/run-native-regression.py`
 - `tools/validate-attachment-intake.py`
 - `tools/validate-continuation-results.py`
 - `tools/validate-original-attachments.py`
+- `tools/validate-static-map-parts.py`

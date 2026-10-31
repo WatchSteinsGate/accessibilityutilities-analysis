@@ -1,5 +1,23 @@
 # AccessibilityUtilities investigation
 
+## Publication checkpoint — explicitly authorized 2026-10-31
+
+The user explicitly requested “report to github now” after the local audit. This publication includes the original-success/minimality report and its reviewed supporting code, ledgers and records, including previously local continuations l–n required for reproduction. The local-pass statements below describe the earlier execution history, not this publication's status. No new binary, diagnostic build or source-archive modification is included. Future GitHub work still requires a new explicit user request.
+
+Current result: two bounded original-behavior differences; original genuine producer/processing and patch necessity remain unresolved. Full local validation: 34 suites /1605 labels, previous 1565 values equal. Expected-difference assertions are not preservation or minimality proof.
+
+
+## Current objective — original success and minimality (local, unpublished)
+
+The user explicitly redirected work away from FPS/crashes: recover the **original success path**, then establish whether the patches are the **smallest justified set preserving intended functionality**. [Current report](docs/reports/ORIGINAL-SUCCESS-PATH-AND-MINIMALITY.md) and [complete 63-range ledger](results/success-path-audit/PATCH-NECESSITY-LEDGER.md). Two bounded native witnesses show original Float→same-frame Menu behavior omitted in R03 and original self-hit pass-through changed. Neither is silently accepted as an intended exception. The original genuine producer/processing path remains open; no minimality/no-breakage certification is claimed.
+
+Full rerun: **34 suites / 1605 labels**, all previous 1565 record values equal, 40 new original-contract records. Passing expected differences is not preservation. The R03 incremental manifest targets V58, not the supplied original. No GitHub action or binary modification. Older FPS/crash-oriented paragraphs below are historical, not the current work queue.
+
+
+**Current local checkpoint:** [control writers and nonempty native rendering](docs/reports/CONTROL-WRITERS-NONEMPTY-RENDER.md), 236 further labels. All 32 suites / 1565 labels passed; prior 1329 records equal. R03 Float draw returns immediately at entry; native state/pipeline-cache/nonempty render callers advanced. Unpublished, no GitHub actions, no device/FPS/lifetime proof.
+
+**Latest work is LOCAL ONLY and unpublished.** The user's explicit GitHub permission rule overrides standing publication instructions. [Five-area continuation](docs/reports/LOCAL-FIVE-AREA-CONTINUATION.md): 218 new native/model labels; full 28-suite / 1329-label regression passed, prior 1111 records equal. Real pointer lifetime/reentry/GPU/backend behavior is not established. No GitHub action in this continuation.
+
 Private, curated research handoff for a read-only integrity and overlay lifecycle investigation. **This is not a restored original, a performance fix, a patch distribution, or a complete all-path trace.**
 
 ## Start here
@@ -25,7 +43,7 @@ Private, curated research handoff for a read-only integrity and overlay lifecycl
 
 ## What is verified locally
 
-The repository now retains twelve investigation groups:
+This local snapshot retains fourteen investigation groups (published baseline plus unpublished continuations l and m):
 
 | Group | Labeled scoped cases | Validation |
 | --- | ---: | --- |
@@ -41,6 +59,8 @@ The repository now retains twelve investigation groups:
 | Overlay size / backend / attachment composition | 30 | Passed; byte-identical regression rerun |
 | Overlay normal return / R03 wrapper / Menu INI | 31 | New scoped run passed |
 | Bubble callback / native tap writer / pan composition | 22 | Passed; full 23-suite regression passed |
+| Local five-area textures/cache/completion/state/thread continuation | 218 | Passed; full 28-suite / 1329-label regression passed; unpublished |
+| Local pointee writers / nonempty render / state / pipeline-cache | 236 | Passed; full 32-suite / 1565-label regression passed; unpublished |
 
 **Previous normal-return checkpoint:** the native normal-return/Menu-INI pass adds **31 records**, bringing the stored total to **1089 labeled cases** (294 earlier + 795 continuation), not unique end-to-end paths. The new 31-case suite and prior 30-case composition regression passed with unchanged historical records; older native suites were not rerun. The continuation validator expects 795 records across groups a–j; only group j was integrity-validated in this partial checkout. Tested native caller paths now reach normal return, including existing R03 wrapper/helpers, with explicit runtime/providers. Menu nonnil-INI state application is covered under modeled integer reads. This is not complete functional initialization or genuine GPU/backend success. [Latest findings and limits](docs/reports/OVERLAY-NORMAL-RETURN-MENU-INI.md).
 
