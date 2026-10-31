@@ -97,3 +97,11 @@ See [focused report](reports/FACTORY-CONTROL-PROVENANCE.md): 54 new passing scop
 ## Original-file delivery correction — 2026-10-31
 
 The user clarified that the ZIPs themselves were the primary requested deliverable. All eleven original attachments are now uploaded unchanged as [repository release assets](../archives/2026-10-31/README.md), separate from curated Git-tree research. The archive index provides direct original-file downloads and SHA-256 records. Earlier omission statements describe the initial summaries-only stage. No source code was executed, no new native/model cases were added, and technical research priorities are unchanged.
+
+## Bubble callback composition — 2026-10-31 (latest technical continuation)
+
+[Focused report](reports/BUBBLE-CALLBACK-COMPOSITION.md): 22 additional R03 native/model labels connect native initializer registration/cold cache population to manually delivered existing install/tap/pan IMPs. Native install requires a main-thread provider answer; nil button/pan outcomes remain explicit conditions. The tap body XORs the low bit of the byte at the first published Overlay control pointer; full native once/factory reuse followed by tap writes the first mapped allocation, not later synthetic input pointers. This is a concrete writer, not proof of changed actual inputs, deallocation or dangling lifetime. Pan state acceptance/reset is executed; narrow geometry can skip position update while translation is still consumed.
+
+All 23 suites were freshly rerun with Python 3.13.15 / Capstone 5.0.7 / Unicorn 2.1.4: 1111 labels passed, every prior record value unchanged. Complete continuation integrity now covers 817 records, plus 294 base records = 1111 total stored labels; not unique paths. Full-checkout checksums, links/inventory and input identities checked. The source-download blocker was resolved after the user made the repo public; no visibility setting was changed by this analysis.
+
+Next: successful Menu/Float/Draw texture callbacks and control deallocation/replacement/remaining writers. Actual callback delivery/scheduling, UIKit/ARC lifetime, GPU/device success and performance remain unresolved. No diagnostic build, native input edits, method installation or FPS/touch fix.

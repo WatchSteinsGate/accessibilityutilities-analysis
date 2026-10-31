@@ -2,6 +2,7 @@
 
 The curated Git-tree investigation and archive index files are listed here. The eleven original attachments are downloadable release assets, indexed under `archives/2026-10-31/`, not binary files in the Git code tree. `SHA256SUMS` covers every listed file except itself. See [attachment intake](ATTACHMENT-INTAKE.md) and [artifact provenance](CONTINUATION-ARTIFACTS.md).
 
+
 - `.gitignore`
 - `AGENTS.md`
 - `README.md`
@@ -22,6 +23,7 @@ The curated Git-tree investigation and archive index files are listed here. The 
 - `docs/REPORT-TEMPLATE.md`
 - `docs/RESIZE-LAYOUT-CONTINUATION.md`
 - `docs/WORKLOG.md`
+- `docs/reports/BUBBLE-CALLBACK-COMPOSITION.md`
 - `docs/reports/FACTORY-CONTROL-PROVENANCE.md`
 - `docs/reports/INITIALIZER-EFFECTS.md`
 - `docs/reports/LIFECYCLE-SCHEDULING.md`
@@ -82,6 +84,8 @@ The curated Git-tree investigation and archive index files are listed here. The 
 - `results/continuations/continuation-h/overlay-config-tests.json`
 - `results/continuations/continuation-i/overlay-attachment-tests.json`
 - `results/continuations/continuation-j/overlay-return-menu-tests.json`
+- `results/continuations/continuation-k/bubble-callback-tests.json`
+- `results/continuations/continuation-k/regression-summary.json`
 - `results/lifecycle/size-sync-tests.json`
 - `results/lifecycle/summary.json`
 - `results/lifecycle/view-lifecycle-tests.json`
@@ -123,6 +127,7 @@ The curated Git-tree investigation and archive index files are listed here. The 
 - `tests/continuation-h/test_overlay_config.py`
 - `tests/continuation-i/test_overlay_attachment.py`
 - `tests/continuation-j/test_overlay_return_menu.py`
+- `tests/continuation-k/test_bubble_callbacks.py`
 - `tests/macho.py`
 - `tests/native_env.py`
 - `tests/test_button_layout.py`
@@ -131,6 +136,7 @@ The curated Git-tree investigation and archive index files are listed here. The 
 - `tests/test_size_sync.py`
 - `tests/test_view_lifecycle.py`
 - `tests/ui-cache-schema.json`
+- `tools/run-native-regression.py`
 - `tools/validate-attachment-intake.py`
 - `tools/validate-continuation-results.py`
 - `tools/validate-original-attachments.py`
