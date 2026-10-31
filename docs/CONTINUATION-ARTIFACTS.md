@@ -48,3 +48,12 @@ The new suite and mapper ran with Python 3.13 / Capstone 5.0.7 / Unicorn 2.1.4. 
 [Attachment intake](ATTACHMENT-INTAKE.md) and its [manifest](../results/source-attachments/2026-10-30-intake.json) account for nine attachment occurrences / seven unique hashes, including three byte-identical original workpacks. The exact supplied resize source report is preserved; mixed archives, proprietary inputs and build/apply/bypass material are not uploaded wholesale. Existing curated records are not asserted byte-identical to archive source JSON.
 
 The new startup/reentry pass contributes 58 cases and ten equal code/data ranges. Existing scheduling (64) and attachment (110) suites passed fresh reruns; those reruns are not new cases. Continuation records total 564; including earlier lifecycle/resize gives 858 stored labeled records. Group-d integrity and all present staged hashes were checked; the complete repository/564-record dataset was not downloaded or fully revalidated in this partial checkout. The earlier groups retain their historical meaning.
+
+## Bubble callback composition — 2026-10-31
+
+- Reviewed new source: `tests/continuation-k/test_bubble_callbacks.py`; existing group-j/i/h/g/e/b helpers remain unchanged.
+- Complete new records: `results/continuations/continuation-k/bubble-callback-tests.json` (22 labels, five bounded R03 code-window hashes, both input hashes).
+- Portable full-suite runner: `tools/run-native-regression.py`; reviewed environment/count/record-comparison evidence: `results/continuations/continuation-k/regression-summary.json`.
+- Findings: [callback composition](reports/BUBBLE-CALLBACK-COMPOSITION.md). The prior preinitialized-cache button-layout coverage is preserved; new cases compose native cold-cache registration with manual callback delivery and native action bodies.
+- All 23 suites/1111 labels passed; all prior 1089 record values match retained records. Full 817-record continuation integrity, inventory and complete-checkout hashes checked. Earlier outputs retain their original historical meaning.
+- Authorized release archives supplied the exact two read-only binary members after public download became possible; no historical tool or installer executed. Raw disassembly/input bytes, local scratch logs and private absolute input paths are not new Git-tree artifacts. No runtime installation/device/performance result.
