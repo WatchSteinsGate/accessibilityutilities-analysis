@@ -1,5 +1,19 @@
 # Integrity and whole-system trace summary
 
+## Publication checkpoint — explicitly authorized 2026-10-31
+
+The user explicitly requested “report to github now” after the local audit. This publication includes the original-success/minimality report and its reviewed supporting code, ledgers and records, including previously local continuations l–n required for reproduction. The local-pass statements below describe the earlier execution history, not this publication's status. No new binary, diagnostic build or source-archive modification is included. Future GitHub work still requires a new explicit user request.
+
+Current result: two bounded original-behavior differences; original genuine producer/processing and patch necessity remain unresolved. Full local validation: 34 suites /1605 labels, previous 1565 values equal. Expected-difference assertions are not preservation or minimality proof.
+
+
+## Current objective — original success and minimality (local, unpublished)
+
+The user explicitly redirected work away from FPS/crashes: recover the **original success path**, then establish whether the patches are the **smallest justified set preserving intended functionality**. [Current report](reports/ORIGINAL-SUCCESS-PATH-AND-MINIMALITY.md) and [complete 63-range ledger](../results/success-path-audit/PATCH-NECESSITY-LEDGER.md). Two bounded native witnesses show original Float→same-frame Menu behavior omitted in R03 and original self-hit pass-through changed. Neither is silently accepted as an intended exception. The original genuine producer/processing path remains open; no minimality/no-breakage certification is claimed.
+
+Full rerun: **34 suites / 1605 labels**, all previous 1565 record values equal, 40 new original-contract records. Passing expected differences is not preservation. The R03 incremental manifest targets V58, not the supplied original. No GitHub action or binary modification. Older FPS/crash-oriented paragraphs below are historical, not the current work queue.
+
+
 ## Input identities
 
 SHA-256 identifies the supplied artifacts; it does not authenticate their publisher or establish safety.
