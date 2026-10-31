@@ -34,3 +34,9 @@ The scheduling report, two portable scripts, complete 64-case records and bounde
 ## Reattached source intake and startup/reentry continuation
 
 All nine supplied occurrences are identified in [attachment intake](ATTACHMENT-INTAKE.md), including duplicate workpacks and the R01 candidate. The exact standalone resize report is included as historical source. Archive-level identities/member counts and verified original/R03 member hashes are retained; this is not archive recovery from Git. Opaque source ZIPs, installable framework inputs, patch/apply/build/bypass content, raw disassembly and scratch pointer scans remain omitted. The R01 candidate was not executed. The reviewed new native scripts, all 58 case records and bounded static metadata are included instead. No secrets or attachment download/session paths are published.
+
+## 2026-10-31 reattachment intake
+
+The [dated manifest](../results/source-attachments/2026-10-31-intake.json) accounts for all eleven occurrences, including two hash-identical original workpacks and eight occurrences matching earlier provenance. No raw ZIP is uploaded. The existing exact resize source report is reused, not duplicated.
+
+T01/T02 include proprietary diagnostic frameworks, binary deltas, build/apply scripts and instrumentation assembly; only reviewed narrative provenance and identities are retained. The raw session-context TXT includes mixed operational/security/patch history, private/nonportable workspace/attachment references and a decoded-capture appendix; its curated narrative omits those details and is not a byte-for-byte export. New archive identities are not a promise of Git recovery or authorization to redistribute omitted material. No package/native execution, modified release, new capture or device-performance validation was performed.
