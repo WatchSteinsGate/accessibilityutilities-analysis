@@ -6,6 +6,7 @@ Private, curated research handoff for a read-only integrity and overlay lifecycl
 
 **Agents: read [AGENTS.md](AGENTS.md) before working.** Report work and add reviewed supporting files directly to this repository; maintain the [agent worklog](docs/WORKLOG.md), reports, next steps and integrity manifests.
 
+- [Bubble callback composition and full regression](docs/reports/BUBBLE-CALLBACK-COMPOSITION.md): latest 22-case continuation; all 23 suites rerun.
 - [What changed and what is next](docs/NEXT-STEPS.md): latest success-path tracing checkpoint.
 - [Cancellation, render cleanup and shortcut consumer](docs/CANCELLATION-RENDER-SHORTCUT.md): 232 additional scoped cases.
 - [Accepted attachment, singleton reuse and render completion](docs/ATTACHMENT-FACTORY-COMPLETION.md): 210 additional scoped cases.
@@ -24,7 +25,7 @@ Private, curated research handoff for a read-only integrity and overlay lifecycl
 
 ## What is verified locally
 
-The repository now retains eleven investigation groups:
+The repository now retains twelve investigation groups:
 
 | Group | Labeled scoped cases | Validation |
 | --- | ---: | --- |
@@ -39,8 +40,11 @@ The repository now retains eleven investigation groups:
 | Overlay configuration / font guards / backend wrappers | 36 | Passed; byte-identical regression rerun |
 | Overlay size / backend / attachment composition | 30 | Passed; byte-identical regression rerun |
 | Overlay normal return / R03 wrapper / Menu INI | 31 | New scoped run passed |
+| Bubble callback / native tap writer / pan composition | 22 | Passed; full 23-suite regression passed |
 
-The native normal-return/Menu-INI pass adds **31 records**, bringing the stored total to **1089 labeled cases** (294 earlier + 795 continuation), not unique end-to-end paths. The new 31-case suite and prior 30-case composition regression passed with unchanged historical records; older native suites were not rerun. The continuation validator expects 795 records across groups a–j; only group j was integrity-validated in this partial checkout. Tested native caller paths now reach normal return, including existing R03 wrapper/helpers, with explicit runtime/providers. Menu nonnil-INI state application is covered under modeled integer reads. This is not complete functional initialization or genuine GPU/backend success. [Latest findings and limits](docs/reports/OVERLAY-NORMAL-RETURN-MENU-INI.md).
+**Previous normal-return checkpoint:** the native normal-return/Menu-INI pass adds **31 records**, bringing the stored total to **1089 labeled cases** (294 earlier + 795 continuation), not unique end-to-end paths. The new 31-case suite and prior 30-case composition regression passed with unchanged historical records; older native suites were not rerun. The continuation validator expects 795 records across groups a–j; only group j was integrity-validated in this partial checkout. Tested native caller paths now reach normal return, including existing R03 wrapper/helpers, with explicit runtime/providers. Menu nonnil-INI state application is covered under modeled integer reads. This is not complete functional initialization or genuine GPU/backend success. [Latest findings and limits](docs/reports/OVERLAY-NORMAL-RETURN-MENU-INI.md).
+
+**Current callback checkpoint (2026-10-31):** 22 new records bring the stored total to **1111 labels** (294 earlier + 817 continuation), not unique end-to-end paths. Native cold-cache registration and manually delivered install/tap/pan callbacks compose with the existing R03 return path. The actual tap writer XORs bit 0 through the first published control pointer; no actual dangling lifetime or FPS cause is proved. All **23 native/model suites** were freshly rerun with pinned dependencies; all prior 1089 record values match retained history. Full 817-record integrity and complete-checkout checksums checked. [Findings/limits](docs/reports/BUBBLE-CALLBACK-COMPOSITION.md) and [regression summary](results/continuations/continuation-k/regression-summary.json).
 
 In the prior publication, the **nine scripts / 442 records** were rerun using the repository's pinned Capstone 5.0.7 and Unicorn 2.1.4. The then-resulting **736 stored labeled cases across those three groups** are not 736 unique or independent end-to-end paths. Counts include paired builds, synthetic inputs, repetitions, staged mutations and directly seeded cleanup states. Original session runs of the two new groups used Capstone 5.0.9; the portable rerun used 5.0.7.
 
