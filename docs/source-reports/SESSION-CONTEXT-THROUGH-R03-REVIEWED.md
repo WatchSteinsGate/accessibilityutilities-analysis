@@ -26,7 +26,7 @@ Later repository passes extend read-only native/model tracing beyond that histor
 
 The source has a feedback chronology, target/baseline discussion, diagnostic and candidate history, source-recovery status, references/artifact inventories, pending items, historical pasted material, package README appendices and an existing decoded-capture appendix. This edition retains the benign context and evidence limits, not every implementation detail or appendix.
 
-The raw export is deliberately not published: it contains private/nonportable workspace and attachment references and mixed patch/security-related historical material. No raw decoded capture, proprietary disassembly, patch/apply/build recipes, access-control material, private identifier, download/session URI or local input path is copied into this edition. The full source remains a separately retained attachment, not a recoverable Git artifact.
+The earlier summaries-only update did not publish the raw export because it contains private/nonportable workspace and attachment references and mixed patch/security-related historical material. Following the user's clarification, the [unchanged original](https://github.com/WatchSteinsGate/accessibilityutilities-analysis/releases/download/source-attachments-2026-10-31/AccessibilityUtilities-session-context-through-R03.txt) is now retained separately as a private repository release asset. No raw decoded capture, proprietary disassembly, patch/apply/build recipes, access-control material, private identifier, download/session URI or local input path is copied into this edition. The curated narrative does not replace that unchanged downloadable source.
 
 ## Continuation boundary
 

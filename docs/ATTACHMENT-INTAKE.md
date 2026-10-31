@@ -1,5 +1,13 @@
 # Supplied attachment intake
 
+## Corrected delivery — original ZIPs now uploaded
+
+The user clarified that uploading the ZIPs themselves, not substituting summaries, was the primary request. **All eleven originals are now retained unchanged as [downloadable repository release assets](https://github.com/WatchSteinsGate/accessibilityutilities-analysis/releases/tag/source-attachments-2026-10-31): nine ZIPs and two text documents.** The [organized archive index](../archives/2026-10-31/README.md), [publication manifest](../results/source-attachments/2026-10-31-original-files.json) and per-file checksums record exact destinations and byte identities. Both identical workpack filenames are preserved.
+
+These ZIPs are release assets, not binaries in the Git code tree. GitHub's code-folder upload commit endpoint returned HTTP 400; release asset publication completed instead. All eleven uploaded asset sizes and GitHub SHA-256 digests match the supplied files. No archive member was executed. The dated review below documents the earlier summaries-only publication, not the current absence of the original files from GitHub.
+
+Run `python tools/validate-original-attachments.py` for publication metadata, or add `--directory /path/to/downloaded-originals` for byte verification.
+
 ## Current batch — 2026-10-31
 
 The [new intake manifest](../results/source-attachments/2026-10-31-intake.json) accounts for all **11 supplied occurrences / 10 unique SHA-256 identities**. Eight occurrences match the seven unique identities in the earlier intake; three identities are new to that manifest. `workpack-original-reference.zip` and this batch's single `workpack.zip` are identical copies. The earlier nine-occurrence record remains historical and unchanged.

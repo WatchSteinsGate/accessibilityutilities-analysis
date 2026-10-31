@@ -89,3 +89,7 @@ Next: actual requested bubble callback, successful Menu texture work, actual chi
 ## Source intake only — 2026-10-31
 
 [Eleven reattached source occurrences](ATTACHMENT-INTAKE.md) were reviewed and organized into a dated provenance manifest, a [sanitized historical context edition](source-reports/SESSION-CONTEXT-THROUGH-R03-REVIEWED.md) and [T01/T02 provenance](source-reports/TIMING-DIAGNOSTICS-PROVENANCE.md). Eight occurrences duplicate previously recorded identities; no older harness replaces the portable repository suites. No new native tracing, test cases, device evidence or technical completion is claimed. The next native questions remain the requested callback, successful Menu/child texture routes and actual control writers/lifetime. Historical diagnostic instructions are archival, not a new build/capture request.
+
+## Original sources available
+
+The actual nine ZIPs and two text documents are uploaded unchanged as repository release assets, with direct downloads in [the dated archive index](../archives/2026-10-31/README.md). This corrects the earlier summaries-only response; it is not new tracing, a diagnostic build or device validation. Keep retained source data separate from the current executable research workflow.

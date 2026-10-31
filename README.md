@@ -11,7 +11,8 @@ Private, curated research handoff for a read-only integrity and overlay lifecycl
 - [Accepted attachment, singleton reuse and render completion](docs/ATTACHMENT-FACTORY-COMPLETION.md): 210 additional scoped cases.
 - [Lifecycle queue constraints and routing](docs/reports/LIFECYCLE-SCHEDULING.md): 64 further scoped cases; main-queue routes narrow, but do not settle, the reentry question.
 - [Startup registration and reentry boundaries](docs/reports/STARTUP-REENTRY-BOUNDARIES.md): 58 further scoped cases; recovered registration startup provenance, not a proven race.
-- [Attachment intake and source provenance](docs/ATTACHMENT-INTAKE.md): 2026-10-31 batch of 11 occurrences, including reviewed session context and T01/T02 diagnostic lineage; prior intake preserved.
+- [Download original ZIPs and source documents](archives/2026-10-31/README.md): all eleven supplied originals uploaded unchanged as repository release assets (nine ZIPs and two text documents).
+- [Attachment intake and source provenance](docs/ATTACHMENT-INTAKE.md): original-file publication, reviewed context and historical intake records.
 - [New-suite reproduction](docs/CONTINUATION-REPRODUCTION.md) and [artifact provenance](docs/CONTINUATION-ARTIFACTS.md).
 
 - [Continuation handoff](docs/HANDOFF.md): current conclusions, user-reported symptoms, decisions, and next steps.
@@ -45,7 +46,7 @@ In the prior publication, the **nine scripts / 442 records** were rerun using th
 
 Objective-C/UIKit, ARC, dispatch/once semantics, weak-reference results, journal and selected backend boundaries remain modeled. No real backend, iOS loader, Metal/GPU timing, asynchronous race, device FPS or physical touch latency is verified.
 
-The original is the **supplied reference workpack**, not independently publisher-authenticated code. Neither input binary is included. The investigation remains incomplete; see the handoff for the next unresolved work.
+The original is the **supplied reference workpack**, not independently publisher-authenticated code. The supplied original/R03 packages are now available unchanged as [repository release assets](archives/2026-10-31/README.md), separate from the Git code tree and curated tests. The investigation remains incomplete; see the handoff for the next unresolved work.
 
 ## Reproduce the bounded tests
 
@@ -68,6 +69,6 @@ Tests execute native instructions in **emulated memory** with stubbed runtime bo
 
 ## Project boundaries
 
-No credentials, proprietary framework/game binaries, installable bundles, bypass patchers, anti-cheat tooling, or binary download links are included. Earlier bypass-related artifacts and unreviewed historical archives were intentionally omitted, not silently lost. See [the omissions manifest](docs/OMISSIONS.md).
+At the user's explicit request, the eleven original source attachments are now retained unchanged as [downloadable repository release assets](archives/2026-10-31/README.md), separate from the curated Git-tree research. They can contain supplied binaries, historical tools and mixed/private context; their contents were not executed or adopted as current instructions. The earlier curated-only packaging and the current retention exception are distinguished in [retention/provenance](docs/OMISSIONS.md).
 
 No blanket license is granted to third-party material. This repository does not assert ownership or redistribution rights over any proprietary inputs. Private visibility is not a substitute for authorization.
