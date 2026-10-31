@@ -1,4 +1,12 @@
-# Deliberate omissions and provenance
+# Retention, historical omissions and provenance
+
+## Current retention exception — original attachments
+
+At the user's explicit correction, all eleven originals from this batch are retained unchanged as [repository release assets](https://github.com/WatchSteinsGate/accessibilityutilities-analysis/releases/tag/source-attachments-2026-10-31), with an [archive index](../archives/2026-10-31/README.md) and [publication manifest](../results/source-attachments/2026-10-31-original-files.json). This supersedes earlier statements that these particular ZIPs, packages and the context TXT were not uploaded to GitHub. They remain separate from the curated Git-tree reports/tests; the ZIP bytes are not Git code-tree files.
+
+The private repository's visibility was unchanged. Sources may contain framework binaries, historical tools, mixed operational evidence and private/nonportable references. They were not executed, altered, expanded into the canonical suites or adopted as current instructions. Retention does not authenticate a publisher, establish safety or grant redistribution rights.
+
+## Historical curated-publication policy
 
 This is a **curated safe handoff**, not “all historical files.” No omitted attachment should be assumed uploaded or recoverable from this repository.
 
