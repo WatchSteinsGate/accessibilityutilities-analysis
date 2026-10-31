@@ -11,7 +11,7 @@ Private, curated research handoff for a read-only integrity and overlay lifecycl
 - [Accepted attachment, singleton reuse and render completion](docs/ATTACHMENT-FACTORY-COMPLETION.md): 210 additional scoped cases.
 - [Lifecycle queue constraints and routing](docs/reports/LIFECYCLE-SCHEDULING.md): 64 further scoped cases; main-queue routes narrow, but do not settle, the reentry question.
 - [Startup registration and reentry boundaries](docs/reports/STARTUP-REENTRY-BOUNDARIES.md): 58 further scoped cases; recovered registration startup provenance, not a proven race.
-- [All nine supplied attachments accounted for](docs/ATTACHMENT-INTAKE.md).
+- [Attachment intake and source provenance](docs/ATTACHMENT-INTAKE.md): 2026-10-31 batch of 11 occurrences, including reviewed session context and T01/T02 diagnostic lineage; prior intake preserved.
 - [New-suite reproduction](docs/CONTINUATION-REPRODUCTION.md) and [artifact provenance](docs/CONTINUATION-ARTIFACTS.md).
 
 - [Continuation handoff](docs/HANDOFF.md): current conclusions, user-reported symptoms, decisions, and next steps.

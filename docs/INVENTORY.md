@@ -29,6 +29,8 @@ Expanded reviewed text only; no proprietary binaries or opaque archives. `SHA256
 - `docs/reports/OVERLAY-SIZE-ATTACHMENT-COMPOSITION.md`
 - `docs/reports/STARTUP-REENTRY-BOUNDARIES.md`
 - `docs/source-reports/Resize-layout-continuation.md`
+- `docs/source-reports/SESSION-CONTEXT-THROUGH-R03-REVIEWED.md`
+- `docs/source-reports/TIMING-DIAGNOSTICS-PROVENANCE.md`
 - `requirements.txt`
 - `results/continuations/continuation-a/cancellation-tests.json`
 - `results/continuations/continuation-a/cleanup-tail-tests.json`
@@ -92,6 +94,7 @@ Expanded reviewed text only; no proprietary binaries or opaque archives. `SHA256
 - `results/resize/reentry-tests.json`
 - `results/resize/summary.json`
 - `results/source-attachments/2026-10-30-intake.json`
+- `results/source-attachments/2026-10-31-intake.json`
 - `tests/continuation-a/emulator.py`
 - `tests/continuation-a/native.py`
 - `tests/continuation-a/static_audit.py`
